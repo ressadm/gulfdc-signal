@@ -82,8 +82,8 @@ function SidebarProvider({
         _setOpen(openState)
       }
 
-      // This sets the cookie to keep the sidebar state.
-      document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`
+      // Keep sidebar state in React only. Browser storage and cookies are
+      // intentionally avoided because the sandboxed preview blocks them.
     },
     [setOpenProp, open]
   )
