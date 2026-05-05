@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GulfDC Signal — refined data-center/operations aesthetic.
+   Cool slate/charcoal surfaces, teal/cyan as the primary signal color,
+   amber for risk/watch items, red for contradictions, green for live/credible. */
+
+/* LIGHT MODE */
+:root {
+  --button-outline: rgba(15, 23, 30, 0.12);
+  --badge-outline: rgba(15, 23, 30, 0.06);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(15, 23, 30, 0.04);
+  --elevate-2: rgba(15, 23, 30, 0.09);
+
+  --background: 210 24% 97%;          /* slate-50 */
+  --foreground: 215 28% 15%;          /* slate-900 */
+  --border: 215 16% 86%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 28% 15%;
+  --card-border: 215 16% 88%;
+
+  --sidebar: 215 28% 12%;             /* dark even in light mode for ops feel */
+  --sidebar-foreground: 210 20% 92%;
+  --sidebar-border: 215 25% 18%;
+  --sidebar-primary: 184 80% 44%;     /* teal */
+  --sidebar-primary-foreground: 215 28% 10%;
+  --sidebar-accent: 215 25% 18%;
+  --sidebar-accent-foreground: 210 20% 92%;
+  --sidebar-ring: 184 80% 44%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 28% 15%;
+  --popover-border: 215 16% 86%;
+
+  --primary: 184 76% 34%;             /* teal-700 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 16% 92%;
+  --secondary-foreground: 215 28% 15%;
+  --muted: 215 16% 94%;
+  --muted-foreground: 215 14% 38%;
+  --accent: 184 60% 92%;              /* teal tint */
+  --accent-foreground: 184 76% 22%;
+  --destructive: 0 75% 45%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 215 16% 80%;
+  --ring: 184 76% 34%;
+
+  /* Chart colors — teal/cyan/amber/red/green family, distinct & accessible */
+  --chart-1: 184 80% 38%;             /* teal */
+  --chart-2: 196 90% 50%;             /* cyan */
+  --chart-3: 35 92% 52%;              /* amber */
+  --chart-4: 0 72% 50%;               /* red */
+  --chart-5: 142 60% 38%;             /* green */
+
+  /* Semantic signal colors */
+  --signal-live: 142 60% 38%;
+  --signal-watch: 35 92% 50%;
+  --signal-risk: 0 72% 50%;
+  --signal-info: 196 90% 50%;
+  --signal-primary: 184 80% 38%;
+
+  --font-sans: "Inter", "Satoshi", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --radius: 0.5rem;
+
+  --shadow-2xs: 0px 1px 0px 0px hsl(0 0% 0% / 0.02);
+  --shadow-xs: 0px 1px 0px 0px hsl(0 0% 0% / 0.03);
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.04);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-md: 0px 4px 8px -2px hsl(0 0% 0% / 0.06);
+  --shadow-lg: 0px 8px 16px -4px hsl(0 0% 0% / 0.08);
+  --shadow-xl: 0px 16px 32px -8px hsl(0 0% 0% / 0.10);
+  --shadow-2xl: 0px 24px 48px -12px hsl(0 0% 0% / 0.12);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+/* DARK MODE — the "first-class" experience */
+.dark {
+  --button-outline: rgba(255, 255, 255, 0.08);
+  --badge-outline: rgba(255, 255, 255, 0.05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255, 255, 255, 0.04);
+  --elevate-2: rgba(255, 255, 255, 0.08);
+
+  --background: 215 28% 7%;           /* deep slate */
+  --foreground: 210 18% 92%;
+  --border: 215 22% 17%;
+  --card: 215 28% 9%;
+  --card-foreground: 210 18% 92%;
+  --card-border: 215 22% 16%;
+
+  --sidebar: 215 30% 6%;
+  --sidebar-foreground: 210 18% 88%;
+  --sidebar-border: 215 25% 14%;
+  --sidebar-primary: 184 80% 50%;
+  --sidebar-primary-foreground: 215 30% 6%;
+  --sidebar-accent: 215 25% 14%;
+  --sidebar-accent-foreground: 210 18% 92%;
+  --sidebar-ring: 184 80% 50%;
+
+  --popover: 215 28% 11%;
+  --popover-foreground: 210 18% 92%;
+  --popover-border: 215 22% 17%;
+
+  --primary: 184 80% 48%;             /* teal-cyan */
+  --primary-foreground: 215 30% 6%;
+  --secondary: 215 22% 16%;
+  --secondary-foreground: 210 18% 92%;
+  --muted: 215 22% 14%;
+  --muted-foreground: 215 14% 62%;
+  --accent: 215 22% 18%;
+  --accent-foreground: 210 18% 92%;
+  --destructive: 0 70% 52%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 215 22% 22%;
+  --ring: 184 80% 48%;
+
+  --chart-1: 184 80% 52%;
+  --chart-2: 196 90% 60%;
+  --chart-3: 35 92% 60%;
+  --chart-4: 0 70% 60%;
+  --chart-5: 142 60% 50%;
+
+  --signal-live: 142 60% 50%;
+  --signal-watch: 35 92% 60%;
+  --signal-risk: 0 70% 60%;
+  --signal-info: 196 90% 60%;
+  --signal-primary: 184 80% 52%;
+
+  --shadow-2xs: 0px 1px 0px 0px hsl(0 0% 0% / 0.30);
+  --shadow-xs: 0px 1px 0px 0px hsl(0 0% 0% / 0.40);
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.40);
+  --shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.45);
+  --shadow-md: 0px 4px 8px -2px hsl(0 0% 0% / 0.50);
+  --shadow-lg: 0px 8px 16px -4px hsl(0 0% 0% / 0.55);
+  --shadow-xl: 0px 16px 32px -8px hsl(0 0% 0% / 0.60);
+  --shadow-2xl: 0px 24px 48px -12px hsl(0 0% 0% / 0.65);
+
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11";
+  }
+  .num, .tabular { font-variant-numeric: tabular-nums lining-nums; }
+  /* Subtle scanline / grid background reminiscent of NOC dashboards */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@layer utilities {
+  input[type='search']::-webkit-search-cancel-button { @apply hidden; }
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  /* Signal pill helpers */
+  .signal-live   { color: hsl(var(--signal-live));   background: hsl(var(--signal-live) / 0.12);  border-color: hsl(var(--signal-live) / 0.3); }
+  .signal-watch  { color: hsl(var(--signal-watch));  background: hsl(var(--signal-watch) / 0.14); border-color: hsl(var(--signal-watch) / 0.3); }
+  .signal-risk   { color: hsl(var(--signal-risk));   background: hsl(var(--signal-risk) / 0.14);  border-color: hsl(var(--signal-risk) / 0.3); }
+  .signal-info   { color: hsl(var(--signal-info));   background: hsl(var(--signal-info) / 0.14);  border-color: hsl(var(--signal-info) / 0.3); }
+  .signal-primary{ color: hsl(var(--signal-primary));background: hsl(var(--signal-primary) / 0.14);border-color: hsl(var(--signal-primary) / 0.3); }
+
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: ''; pointer-events: none; position: absolute; inset: 0px;
+    border-radius: inherit; z-index: -1;
+  }
+  .toggle-elevate.toggle-elevated::before { background-color: var(--elevate-2); }
+  .border.toggle-elevate::before { inset: -1px; }
+
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) { position: relative; z-index: 0; }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: ''; pointer-events: none; position: absolute; inset: 0px;
+    border-radius: inherit; z-index: 999;
+  }
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after { background-color: var(--elevate-1); }
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after { background-color: var(--elevate-2); }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after { inset: -1px; }
+}
