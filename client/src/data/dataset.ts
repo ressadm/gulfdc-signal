@@ -1,5 +1,6 @@
 // Static-bundled dataset access. Vite imports JSON natively at build time.
-import seedJson from "./seed.json";
+// current.json is the live dashboard state; dated snapshots live in archive/.
+import currentJson from "./current.json";
 
 export type Credibility = "HIGH" | "MEDIUM" | "LOW";
 export type CountryKey =
@@ -120,7 +121,7 @@ export interface Dataset {
   analyst_notes: AnalystNotes;
 }
 
-export const dataset = seedJson as unknown as Dataset;
+export const dataset = currentJson as unknown as Dataset;
 
 export const COUNTRY_PRIORITY: CountryKey[] = [
   "Saudi Arabia",

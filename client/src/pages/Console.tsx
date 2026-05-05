@@ -354,6 +354,11 @@ export default function Console() {
             is the only source of truth. The console documents the intended pipeline so backend
             crawlers / news APIs can be plugged into the same schema without UI changes.
           </p>
+          <p className="mt-2 rounded-md border border-primary/20 bg-primary/10 p-3 text-[11px] leading-relaxed text-foreground/85">
+            Weekly refreshes are versioned: archive the previous <span className="font-mono">current.json</span>,
+            compute deltas against the new candidate dataset, then publish only the analyst-approved
+            version to GitHub Pages. See Archives for the dated snapshot and changelog view.
+          </p>
         </div>
 
         <div className="rounded-lg border border-card-border bg-card p-5">

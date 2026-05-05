@@ -1,0 +1,1032 @@
+{
+  "_meta": {
+    "dataset": "GCC Data Center Ecosystem Seed Dataset",
+    "version": "1.0",
+    "compiled": "2025-Q2 (research window through April 2025, with forward-looking signals to 2026+)",
+    "priority_order": ["Saudi Arabia", "UAE", "Qatar", "Oman", "Bahrain", "Kuwait"],
+    "credibility_scale": "HIGH = official company/govt source; MEDIUM = credible industry/financial media; LOW = aggregator/analyst estimate without primary source",
+    "mw_note": "All MW figures refer to IT power load unless noted as 'total facility power'. Some sources conflate these; flag noted where relevant.",
+    "disclaimer": "Figures sourced from public announcements and credible media. Announced MW often reflects maximum build-out targets; phased delivery timelines vary. Do not treat announced figures as committed or contracted capacity."
+  },
+
+  "supply_events": [
+    {
+      "id": "SA-001",
+      "company": "HUMAIN (PIF subsidiary)",
+      "partners": ["NVIDIA", "AWS", "xAI", "AMD", "Qualcomm", "AirTrunk (Blackstone)", "stc / center3"],
+      "country": "Saudi Arabia",
+      "city_location": "Riyadh (Phase 1 campus); Dammam (Phase 1 campus); 211 land plots nationwide",
+      "capacity_mw": {
+        "phase1_announced": 200,
+        "target_2030": 1900,
+        "target_2034": 6600,
+        "confidence": "MEDIUM",
+        "notes": "Phase 1: twin 100 MW campuses in Riyadh + Dammam, Q2 2026 target. 1.9 GW by 2030 and 6.6 GW by 2034 are strategic targets. 500 MW flagship with xAI is a separate announced figure layered on top. Total $77B cost estimate is aspirational. Initial capacity already claimed as 'sold out'."
+      },
+      "type": "AI/Hyperscale",
+      "stage": "Under Construction (Phase 1); Announced (subsequent phases)",
+      "timeline": "Q2 2026 (Phase 1 live); 2030 (1.9 GW milestone); 2034 (6.6 GW milestone)",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "The 6.6 GW 2034 figure is a long-range target, not a contracted commitment. $77B total cost cited in analysis of PIF filings is plausible but unverified by HUMAIN directly. Multiple deal dollar figures ($77B, $23B in tech agreements) appear in different sources with slight inconsistencies — treat aggregate capex figures as indicative.",
+      "source_urls": [
+        "https://nvidianews.nvidia.com/news/humain-and-nvidia-announce-strategic-partnership-to-build-ai-factories-of-the-future-in-saudi-arabia",
+        "https://www.spglobal.com/en/research-insights/special-reports/look-forward/data-center-frontiers/saudi-arabia-data-center-market",
+        "https://vision2030.ai/analysis/humain-ai-infrastructure/"
+      ]
+    },
+    {
+      "id": "SA-002",
+      "company": "SDAIA (Saudi Data and AI Authority)",
+      "partners": ["Government of Saudi Arabia"],
+      "country": "Saudi Arabia",
+      "city_location": "Riyadh",
+      "capacity_mw": {
+        "announced": 480,
+        "confidence": "HIGH",
+        "notes": "480 MW Tier IV government data center. Foundation stone laid Jan 2, 2026. Area: 2.78M sq meters (~30M sq ft). Billed as world's largest government-owned data center by capacity."
+      },
+      "type": "Sovereign/Government",
+      "stage": "Under Construction",
+      "timeline": "Foundation laid Jan 2026; operational timeline not officially stated",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "Project cost cited as $2.7B (LinkedIn/Gulf News) and capacity as 480 MW consistently across Xinhua, BABL AI, and w.media. Phased build-out likely; full 480 MW may take multiple years.",
+      "source_urls": [
+        "https://english.news.cn/20260102/962526f16c6b4629ae90e9a2b96078b8/c.html",
+        "https://babl.ai/saudi-arabia-launches-480-mw-hexagon-data-center-positioning-kingdom-in-global-compute-race/",
+        "https://w.media/sdaia-lays-foundation-stone-for-480mw-hexagon-government-data-center-in-riyadh/"
+      ]
+    },
+    {
+      "id": "SA-003",
+      "company": "DataVolt",
+      "partners": ["NEOM"],
+      "country": "Saudi Arabia",
+      "city_location": "NEOM Oxagon District, Red Sea coast (northwest Saudi Arabia)",
+      "capacity_mw": {
+        "announced": 1500,
+        "phase1_investment_usd_bn": 5,
+        "confidence": "MEDIUM",
+        "notes": "1.5 GW target capacity cited in multiple sources for the AI campus; Phase 1 $5B investment. NEOM pivot from 'The Line' megacity confirmed after Sept 2025 suspension. Uses Red Sea seawater cooling. Net-zero design via NEOM solar/wind."
+      },
+      "type": "AI/Hyperscale",
+      "stage": "Announced",
+      "timeline": "Phase 1 operational by 2028",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "1.5 GW figure appears in LinkedIn/ABHS analysis and Mordor Intelligence. NEOM official announcement (Feb 10, 2025) references '$5B initial investment' but does not state total MW explicitly — the 1.5 GW figure may be a multi-phase projection. Mark as aspirational target.",
+      "source_urls": [
+        "https://www.neom.com/en-us/newsroom/datavolt-signs-agreement-with-neom",
+        "https://www.abhs.in/blog/saudi-arabia-the-line-neom-cancelled-ai-data-center-pivot"
+      ]
+    },
+    {
+      "id": "SA-004",
+      "company": "Microsoft",
+      "partners": [],
+      "country": "Saudi Arabia",
+      "city_location": "Eastern Province (three AZ locations)",
+      "capacity_mw": {
+        "announced": "UNKNOWN — not disclosed publicly",
+        "confidence": "LOW",
+        "notes": "Three data centers constructed, each forming an Azure availability zone. Microsoft confirmed Saudi Arabia East region available from Q4 2026. MW not disclosed. Typical hyperscale AZ = 30-100+ MW."
+      },
+      "type": "Hyperscale/Cloud Region",
+      "stage": "Construction Complete (pending operational launch)",
+      "timeline": "Q4 2026 customer availability",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "Microsoft's official announcement confirms Q4 2026 operational date. MW capacity not officially stated — analyst estimates range 60-150 MW total across three AZs.",
+      "source_urls": [
+        "https://news.microsoft.com/source/emea/2026/02/microsoft-confirms-saudi-arabia-datacenter-region-available-for-customers-to-run-cloud-workloads-from-q4-2026/"
+      ]
+    },
+    {
+      "id": "SA-005",
+      "company": "Amazon Web Services (AWS)",
+      "partners": [],
+      "country": "Saudi Arabia",
+      "city_location": "Saudi Arabia (specific city not publicly disclosed)",
+      "capacity_mw": {
+        "investment_usd_bn": 5.3,
+        "announced": "UNKNOWN — MW not publicly stated",
+        "confidence": "MEDIUM",
+        "notes": "AWS committed $5.3B to launch Saudi Arabia cloud region by 2026. Three availability zones. Typical AWS region = 50-200 MW total. Edge location separately launched in Jeddah (Jan 2025)."
+      },
+      "type": "Hyperscale/Cloud Region",
+      "stage": "Under Construction",
+      "timeline": "By 2026",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "Investment figure ($5.3B) and timeline (2026) consistent across LinkedIn, Mordor Intelligence, and Reuters. MW not stated — do not use analyst guesses without source.",
+      "source_urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2025/01/new-edge-location-kingdom-saudi-arabia/",
+        "https://www.linkedin.com/posts/atomic-computing_aws-saudiarabia-awslaunchpartner-activity-7375823700971057152-RMCn"
+      ]
+    },
+    {
+      "id": "SA-006",
+      "company": "Google Cloud / PIF (via HUMAIN)",
+      "partners": ["PIF", "HUMAIN"],
+      "country": "Saudi Arabia",
+      "city_location": "Dammam, Eastern Province (existing region); AI hub near Dammam",
+      "capacity_mw": {
+        "investment_usd_bn": 10,
+        "announced": "UNKNOWN — exact MW not stated",
+        "confidence": "MEDIUM",
+        "notes": "Google Cloud already operates Dammam cloud region (launched Nov 2023). New $10B joint AI hub with PIF/HUMAIN. Infrastructure includes latest TPUs and GPUs. MW not publicly specified."
+      },
+      "type": "Hyperscale/Cloud Region + AI Hub",
+      "stage": "Existing region live (2023); AI hub announced (2025)",
+      "timeline": "Existing: Live. AI hub: ongoing buildout",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "Google Cloud Press Corner and PIF/LinkedIn confirm $10B partnership (May 2025). AI hub MW and exact buildout phases not specified.",
+      "source_urls": [
+        "https://www.googlecloudpresscorner.com/2025-05-13-Google-Cloud-and-PIF-Advance-AI-Hub-in-Saudi-Arabia"
+      ]
+    },
+    {
+      "id": "SA-007",
+      "company": "Oracle",
+      "partners": [],
+      "country": "Saudi Arabia",
+      "city_location": "Jeddah (existing); Riyadh (2024 launch); NEOM (planned)",
+      "capacity_mw": {
+        "investment_usd_bn": 1.5,
+        "announced": "UNKNOWN — MW not stated",
+        "confidence": "MEDIUM",
+        "notes": "Three cloud regions: Jeddah (2020), Riyadh (Aug 2024), NEOM (planned). $1.5B total investment. Oracle + NVIDIA announced sovereign AI collaboration in late 2025."
+      },
+      "type": "Hyperscale/Cloud Region",
+      "stage": "Jeddah: Live; Riyadh: Live (Aug 2024); NEOM: Announced",
+      "timeline": "Jeddah & Riyadh: Live. NEOM: TBD",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "The $14B figure cited in one Mordor Intelligence snippet appears to conflate Oracle's global or decade-long commitment with Saudi-specific. The $1.5B Saudi-specific figure is confirmed by CIO article and LinkedIn.",
+      "source_urls": [
+        "https://www.cio.com/article/3497616/oracle-expands-cloud-infrastructure-in-saudi-arabia-boosting-the-kingdoms-ai-and-digital-economy.html"
+      ]
+    },
+    {
+      "id": "SA-008",
+      "company": "center3 (stc Group subsidiary)",
+      "partners": ["HUMAIN (JV for AI DC)"],
+      "country": "Saudi Arabia",
+      "city_location": "Riyadh, Jeddah, Dammam; international: Bahrain",
+      "capacity_mw": {
+        "current_invested": "~300 MW (estimated, $3B invested to date)",
+        "target_2027": 300,
+        "target_2030": 1000,
+        "confidence": "HIGH",
+        "notes": "center3 announced 1 GW target by 2030, with $10B additional investment plan. 300 MW by 2027 as intermediate target. JV with HUMAIN to develop up to 1 GW of AI data center capacity (announced Dec 2025)."
+      },
+      "type": "Colo/Carrier-Neutral + AI",
+      "stage": "Existing (live) + Under Construction + Announced",
+      "timeline": "300 MW by 2027; 1 GW by 2030",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "1 GW by 2030 is a strategic target that overlaps with the HUMAIN JV target — these may represent the same capacity counted twice by different entities. Clarification needed on whether center3 standalone vs. JV capacity is additive.",
+      "source_urls": [
+        "https://center3.com/media-center/news/7",
+        "https://meobserver.org/technology/2025/12/23/saudi-arabia-unveils-1gw-ai-data-centre-plan-through-stc-humain-jv/"
+      ]
+    },
+    {
+      "id": "SA-009",
+      "company": "Equinix",
+      "partners": [],
+      "country": "Saudi Arabia",
+      "city_location": "Saudi Arabia (specific city not confirmed at announcement)",
+      "capacity_mw": {
+        "announced": 100,
+        "investment_usd_bn": 1,
+        "confidence": "MEDIUM",
+        "notes": "Announced at LEAP 2025 (Feb 2025). Initial 100 MW capacity. Hyperscale and retail focus. Equinix's first Saudi facility."
+      },
+      "type": "Colo/Hyperscale",
+      "stage": "Announced",
+      "timeline": "Not specified at announcement",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "The National (credible UAE-based outlet) reporting from LEAP 2025 conference is reliable. Detailed timeline and exact city TBD.",
+      "source_urls": [
+        "https://www.thenationalnews.com/future/technology/2025/02/11/leap-2025-equinix-to-build-1bn-saudi-data-centre-and-start-ups-get-494m-backing/"
+      ]
+    },
+    {
+      "id": "SA-010",
+      "company": "Alfanar Global Development",
+      "partners": [],
+      "country": "Saudi Arabia",
+      "city_location": "Four locations across Riyadh and Dammam",
+      "capacity_mw": {
+        "announced": "UNKNOWN — MW not stated",
+        "investment_usd_bn": 1.4,
+        "confidence": "MEDIUM",
+        "notes": "Four data centers in Riyadh and Dammam. $1.4B investment. Announced LEAP 2025 (Feb 2025). Focus: cloud, AI, government and enterprise. Sustainability-first design."
+      },
+      "type": "Colo/Enterprise/AI",
+      "stage": "Announced",
+      "timeline": "Not specified",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "DCD and Alfanar official newsroom confirm the announcement but note details including capacity and timelines are sparse.",
+      "source_urls": [
+        "https://alfanarprojects.com/en-us/newsroom/alfanar-global-development-unveils-one-billion-four-hundred-million-usd-investment-to-build-four-data-centers-in-ksa/",
+        "https://www.datacenterdynamics.com/en/news/alfanar-to-invest-14bn-in-saudi-arabian-data-centers/"
+      ]
+    },
+    {
+      "id": "SA-011",
+      "company": "Groq / Aramco Digital",
+      "partners": ["Aramco Digital"],
+      "country": "Saudi Arabia",
+      "city_location": "Dammam",
+      "capacity_mw": {
+        "announced": "~5-15 MW (inference cluster, 19,000 LPUs)",
+        "investment_usd_bn": 1.5,
+        "confidence": "MEDIUM",
+        "notes": "Groq committed $1.5B for AI inference infrastructure partnering with Aramco Digital. Facility running 19,000 Groq LPUs in Dammam. Actual MW for inference workloads is relatively low; MW estimate derived from LPU count."
+      },
+      "type": "AI/Inference",
+      "stage": "Under Construction / Early Operational",
+      "timeline": "2025-2026",
+      "credibility_score": "MEDIUM",
+      "contradiction_inflation_notes": "HUMAIN vision2030.ai analysis references this. Primary source for Groq-Aramco Digital deal is limited; treat as medium confidence until confirmed by official Groq/Aramco press release.",
+      "source_urls": [
+        "https://vision2030.ai/analysis/humain-ai-infrastructure/"
+      ]
+    },
+    {
+      "id": "SA-012",
+      "company": "Tencent Cloud",
+      "partners": [],
+      "country": "Saudi Arabia",
+      "city_location": "Riyadh (two availability zones)",
+      "capacity_mw": {
+        "investment_usd_m": 150,
+        "announced": "UNKNOWN — small, typical cloud region build",
+        "confidence": "MEDIUM",
+        "notes": "First Middle East cloud region. Announced at LEAP 2025 (Feb 2025). $150M investment. Two AZs. Focus on digital media, gaming, e-commerce, fintech."
+      },
+      "type": "Hyperscale/Cloud Region",
+      "stage": "Announced/Under Construction",
+      "timeline": "By end of 2025",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "Tencent Cloud official site and DCD confirm. Small investment vs. US hyperscalers; likely sub-50 MW initially.",
+      "source_urls": [
+        "https://www.tencentcloud.com/dynamic/news-details/100638",
+        "https://www.datacenterdynamics.com/en/news/tencent-cloud-launches-first-middle-east-cloud-region-in-saudi-arabia/"
+      ]
+    },
+    {
+      "id": "SA-013",
+      "company": "XDS Datacentres / ICS Arabia",
+      "partners": ["ICS Arabia", "Desert Dragon"],
+      "country": "Saudi Arabia",
+      "city_location": "Riyadh and Jeddah",
+      "capacity_mw": {
+        "announced": 10,
+        "confidence": "MEDIUM",
+        "notes": "10 MW immersion-cooled data center in Riyadh and Jeddah. High-density AI workloads. Tier III certified. Delivery target June 2026."
+      },
+      "type": "AI/Edge/Colo",
+      "stage": "Announced",
+      "timeline": "June 2026",
+      "credibility_score": "MEDIUM",
+      "contradiction_inflation_notes": "Cited by IMARC Group report; primary press release confirmation not independently verified.",
+      "source_urls": [
+        "https://www.imarcgroup.com/saudi-arabia-data-center-market"
+      ]
+    },
+    {
+      "id": "UAE-001",
+      "company": "G42 / Khazna Data Centers (Stargate UAE)",
+      "partners": ["OpenAI", "Oracle", "NVIDIA", "Cisco", "SoftBank"],
+      "country": "UAE",
+      "city_location": "Abu Dhabi (part of 5 GW UAE-US AI Campus, 10 sq miles)",
+      "capacity_mw": {
+        "phase1": 200,
+        "stargate_uae_cluster": 1000,
+        "total_campus_target": 5000,
+        "confidence": "HIGH (200 MW); MEDIUM (1 GW Stargate); LOW (5 GW campus total)",
+        "notes": "200 MW to go live 2026 (confirmed by G42 Oct 2025 press release). 1 GW is the Stargate UAE cluster target. 5 GW is the full campus target with US partners 'in discussions.' Negotiations ongoing due to US security concerns over UAE-China relations."
+      },
+      "type": "AI/Hyperscale",
+      "stage": "Under Construction (200 MW phase); Announced (remainder)",
+      "timeline": "200 MW live 2026; 1 GW timeline TBD; 5 GW multi-year",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "5 GW total campus has not been finalized per Reuters (Oct 2025); US security concerns remain a blocker for full commitment. Do not treat 5 GW as contracted capacity. The 200 MW phase has strongest evidence.",
+      "source_urls": [
+        "https://www.prnewswire.com/apac/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586440.html",
+        "https://openai.com/index/introducing-stargate-uae/",
+        "https://www.reuters.com/business/media-telecom/first-200-mw-uaes-stargate-ai-campus-come-online-next-year-2025-10-14/"
+      ]
+    },
+    {
+      "id": "UAE-002",
+      "company": "Khazna Data Centers / G42",
+      "partners": ["Microsoft (200 MW expansion)"],
+      "country": "UAE",
+      "city_location": "Multiple: Ajman (100 MW AI campus); Jebel Ali (Microsoft AED 2B build); Dammam KSA expansion",
+      "capacity_mw": {
+        "existing_portfolio": 650,
+        "under_construction": "1000+ (across UAE, KSA, Italy)",
+        "uae_current": 400,
+        "ajman_campus": 100,
+        "microsoft_expansion": 200,
+        "confidence": "HIGH",
+        "notes": "Khazna is GCC's largest hyperscale wholesale operator. 30 live data centers; ~650 MW existing portfolio. 100 MW Ajman AI-optimized campus launched construction Feb 2025, >100 kW racks, 1.25 PUE. Microsoft+G42 announced 200 MW UAE expansion (Reuters, Nov 2025). Expanding into KSA (Dammam, up to 200 MW)."
+      },
+      "type": "Hyperscale/Colo/AI",
+      "stage": "Existing (live) + Under Construction",
+      "timeline": "Ajman 100 MW: Q3 2025 target; Microsoft 200 MW: before end 2026",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "The 650 MW existing and 1 GW+ pipeline are from Khazna's own statements (Dec 2025). Cross-check: UAE existing capacity per Business Wire (March 2025) is >250 MW, and Emirates NBD Research (Oct 2025) states 358 MW total UAE — suggesting the '650 MW portfolio' may include non-UAE assets.",
+      "source_urls": [
+        "https://www.reuters.com/world/middle-east/microsoft-g42-announce-200-mw-data-centre-capacity-expansion-uae-2025-11-05/",
+        "https://www.saudigulfprojects.com/2025/12/uaes-khazna-advances-200-mw-data-centers-plans-in-saudi-arabia/",
+        "https://blogs.microsoft.com/on-the-issues/2025/11/03/microsofts-15-2-billion-usd-investment-in-the-uae/"
+      ]
+    },
+    {
+      "id": "UAE-003",
+      "company": "du (Emirates Integrated Telecom) + Microsoft",
+      "partners": ["Microsoft"],
+      "country": "UAE",
+      "city_location": "Dubai (sovereign AI region anchor)",
+      "capacity_mw": {
+        "announced": "UNKNOWN — AED 2B ($544M) investment",
+        "confidence": "MEDIUM",
+        "notes": "AED 2B hyperscale data center agreement announced April 2025 (du + Microsoft). Designed to anchor Dubai's Sovereign AI region. Aligns with Dubai Universal Blueprint for AI (2024). MW not specified."
+      },
+      "type": "Hyperscale/Sovereign AI",
+      "stage": "Announced",
+      "timeline": "Not publicly specified",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "Reuters (April 2025) and RCR Wireless confirm AED 2B figure. MW not disclosed. Likely 50-200 MW range based on investment size.",
+      "source_urls": [
+        "https://www.reuters.com/business/media-telecom/dubais-du-announces-2-billion-dirhams-hyperscale-data-center-deal-with-microsoft-2025-04-22/"
+      ]
+    },
+    {
+      "id": "UAE-004",
+      "company": "e& (Etisalat Group)",
+      "partners": ["AWS"],
+      "country": "UAE",
+      "city_location": "UAE (sovereign launchpad)",
+      "capacity_mw": {
+        "announced": "UNKNOWN — $1B+ service agreement, not a DC build",
+        "confidence": "MEDIUM",
+        "notes": "This is a $1B+ cloud services agreement (not a new DC build). e& operates the UAE Sovereign Launchpad powered by AWS (live Nov 2025). Endorsed by UAE Cybersecurity Council. Covers government and regulated industries. AWS already has UAE Region (launched 2022, $5B investment through 2036 in UAE economy)."
+      },
+      "type": "Sovereign Cloud/Colo",
+      "stage": "Live (Sovereign Launchpad, Nov 2025)",
+      "timeline": "Live",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "This entry is primarily a partnership/sovereign cloud offering, not a new physical DC. Classified here because it creates demand pull for local AWS UAE Region capacity.",
+      "source_urls": [
+        "https://www.eand.com/en/news/3-nov-25-uae-sovereign-launchpad-offered-by-eand-and-powered-by-aws-is-now-live.html",
+        "https://press.aboutamazon.com/2024/10/aws-and-e-enter-into-1-billion-plus-agreement-as-part-of-new-strategic-alliance"
+      ]
+    },
+    {
+      "id": "QA-001",
+      "company": "Meeza",
+      "partners": [],
+      "country": "Qatar",
+      "city_location": "Doha / Um Garn",
+      "capacity_mw": {
+        "current": "~30-40 MW (from Q3 2025 investor call referencing MV7 = 14 MW takes total well over 50 MW)",
+        "planned_additions": "M-Vault 4 (4 MW, H1 2026); Flagship 24 MW Um Garn campus (6 MW by end 2027); MV7 14 MW (planned)",
+        "confidence": "HIGH",
+        "notes": "Meeza Q3 2025 investor call confirms quadrupling capacity target over 4 years. M-Vault 4 expansion (4 MW) on track H1 2026, already sold. 24 MW flagship campus under construction in Um Garn — first 6 MW by end 2027. MV7 planned at 14 MW."
+      },
+      "type": "Colo/Sovereign",
+      "stage": "Existing (live) + Under Construction",
+      "timeline": "M-Vault 4: H1 2026; Um Garn first 6 MW: end 2027",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "Meeza Q3 2025 investor transcript is a primary source. 'Quadrupling' is relative — starting base is modest (~10-15 MW pre-expansion). Market size estimates ($76M in 2024, 13 active facilities) consistent across Yahoo Finance/GlobeNewswire.",
+      "source_urls": [
+        "https://www.meeza.net/wp-content/uploads/2025/11/MEEZA-Q3-2025-Investor-Conference-Call-Transcript.pdf",
+        "https://www.telecompaper.com/news/meeza-to-quadruple-data-centre-capacity-in-next-four-years--1567237"
+      ]
+    },
+    {
+      "id": "QA-002",
+      "company": "Ooredoo Q.P.S.C. (Telecom Qatar)",
+      "partners": ["Microsoft", "Oracle", "Google Cloud"],
+      "country": "Qatar",
+      "city_location": "Doha, Al Rayyan, Lusail",
+      "capacity_mw": {
+        "announced": "UNKNOWN — facility details not publicly specified",
+        "confidence": "LOW",
+        "notes": "Ooredoo identified as a key driver in Qatar green data center market alongside hyperscalers. Qatar has 13 active facilities and 5 in pipeline. Total Qatar DC market estimated at $76M (2024)."
+      },
+      "type": "Colo/Telco",
+      "stage": "Existing + Announced",
+      "timeline": "Ongoing",
+      "credibility_score": "MEDIUM",
+      "contradiction_inflation_notes": "Limited primary sources on Ooredoo Qatar DC specifics. GlobeNewswire report (Feb 2026) references market players but lacks individual MW data.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/02/06/3233630/28124/en/qatar-green-data-center-market-report-2025-2030-ooredoo-q-p-s-c-vodafone-p-q-s-c-meeza-q-p-s-c-and-hyperscalers-microsoft-oracle-and-google-cloud-drive-expansion.html"
+      ]
+    },
+    {
+      "id": "OM-001",
+      "company": "Oman Digital Triangle (ODT) / IDCA",
+      "partners": ["IDCA (International Data Center Authority)", "Oman MTCIT", "Ministry of Energy", "Ministry of Economy"],
+      "country": "Oman",
+      "city_location": "Three national digital hubs (locations not yet specified)",
+      "capacity_mw": {
+        "announced": "GW-scale (aspirational)",
+        "confidence": "LOW",
+        "notes": "National digital hub agreement signed Sept 2025. IDCA to develop National Digital Infrastructure Roadmap. Three interconnected hubs targeting AI super-clusters. No specific MW commitments yet. 'GW-scale' used loosely in announcements."
+      },
+      "type": "AI/Sovereign/National Hub",
+      "stage": "Announced",
+      "timeline": "Multi-year; specific phases TBD",
+      "credibility_score": "MEDIUM",
+      "contradiction_inflation_notes": "IDCA press release is self-promotional; independent verification of Oman government ministerial sign-off confirmed by Telecompaper. GW-scale capacity is aspirational and has no contracted MW backing. High risk of delayed or scaled-back delivery.",
+      "source_urls": [
+        "https://www.idc-a.org/news/idca/Sultanate-of-Oman-Signs-National-Digital-Hub-Development-Agreement-with-IDCA-to-Devise-Develop-and-B/9a6b5217-cda1-4543-97b0-70b10a7c47df"
+      ]
+    },
+    {
+      "id": "OM-002",
+      "company": "Gulf Data Hub",
+      "partners": [],
+      "country": "Oman",
+      "city_location": "Oman (specific city not confirmed)",
+      "capacity_mw": {
+        "announced": 32,
+        "confidence": "LOW",
+        "notes": "Two data centers, each 16 MW. Planning stage. 1-2 year timeline to commence development, contingent on demand."
+      },
+      "type": "Colo",
+      "stage": "Announced/Planning",
+      "timeline": "1-2 years from early 2026",
+      "credibility_score": "LOW",
+      "contradiction_inflation_notes": "Cited by Yahoo Finance/investment analysis report. No primary company press release found. Mark as speculative until confirmed.",
+      "source_urls": [
+        "https://finance.yahoo.com/news/oman-data-center-investment-analysis-110300117.html"
+      ]
+    },
+    {
+      "id": "BH-001",
+      "company": "AWS (Amazon Web Services)",
+      "partners": [],
+      "country": "Bahrain",
+      "city_location": "Bahrain (AWS Middle East — Bahrain Region)",
+      "capacity_mw": {
+        "announced": "UNKNOWN — established 2019",
+        "confidence": "MEDIUM",
+        "notes": "AWS first Middle East region. Live since 2019. AWS confirmed infrastructure disruption in Bahrain/UAE region (March 2026). Bahrain cloud-first government strategy prominent. No public MW stated."
+      },
+      "type": "Hyperscale/Cloud Region",
+      "stage": "Live",
+      "timeline": "Live since 2019",
+      "credibility_score": "HIGH",
+      "contradiction_inflation_notes": "Bahrain is AWS's anchor Middle East presence; investment figures not isolated from broader Gulf commitment. Capacity expansion details not publicly disclosed.",
+      "source_urls": [
+        "https://aws.amazon.com/blogs/publicsector/bahrains-cloud-first-success-story/"
+      ]
+    },
+    {
+      "id": "BH-002",
+      "company": "center3 (stc Group)",
+      "partners": [],
+      "country": "Bahrain",
+      "city_location": "Bahrain",
+      "capacity_mw": {
+        "announced": "UNKNOWN — included in center3 regional footprint",
+        "confidence": "LOW",
+        "notes": "center3's 1 GW target explicitly includes Bahrain as part of its regional expansion. No Bahrain-specific MW disclosed."
+      },
+      "type": "Colo",
+      "stage": "Existing / Planned Expansion",
+      "timeline": "Ongoing",
+      "credibility_score": "MEDIUM",
+      "contradiction_inflation_notes": "center3 official announcement mentions Bahrain alongside Riyadh/Jeddah/Dammam. No Bahrain-specific capacity stated.",
+      "source_urls": [
+        "https://center3.com/media-center/news/7"
+      ]
+    },
+    {
+      "id": "KW-001",
+      "company": "Khazna Data Centers / Gulf Data Hub (various)",
+      "partners": [],
+      "country": "Kuwait",
+      "city_location": "Kuwait City",
+      "capacity_mw": {
+        "announced": "Market nascent — no specific MW projects identified",
+        "confidence": "LOW",
+        "notes": "Kuwait colocation market estimated at $16M in 2024, expected $95M by 2030 (34.5% CAGR). Average occupancy projected at 90% by 2030 — indicating severe undersupply risk. Google Cloud, AWS, Microsoft present but no dedicated Kuwait regions announced. Small data centers dominate."
+      },
+      "type": "Colo/Edge",
+      "stage": "Existing (limited)",
+      "timeline": "N/A",
+      "credibility_score": "MEDIUM",
+      "contradiction_inflation_notes": "Kuwait is the most data-center-scarce GCC market. The 90% occupancy projection by 2030 is a risk flag. No large-scale hyperscale project announced as of research date.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2025/09/22/3154086/28124/en/kuwait-data-center-colocation-market-report-2025-2030-kuwait-s-colocation-facilities-occupancy-projected-at-90-by-2030.html"
+      ]
+    }
+  ],
+
+  "demand_signals": [
+    {
+      "id": "DS-001",
+      "demand_type": "Sovereign AI Infrastructure / National Compute Strategy",
+      "country": "Saudi Arabia",
+      "estimated_mw_impact": "500-1900 MW (HUMAIN 2030 target)",
+      "time_horizon": "2025-2030",
+      "rationale": "HUMAIN, PIF-backed AI company, targeting 1.9 GW by 2030 and 6.6 GW by 2034. Crown Prince chairs the entity. Vision 2030 digital transformation mandate creates non-discretionary sovereign demand. National Data Center Strategy (June 2025) targets 1.5 GW by 2030.",
+      "source_urls": [
+        "https://nvidianews.nvidia.com/news/humain-and-nvidia-announce-strategic-partnership-to-build-ai-factories-of-the-future-in-saudi-arabia",
+        "https://www.imarcgroup.com/saudi-arabia-data-center-market"
+      ]
+    },
+    {
+      "id": "DS-002",
+      "demand_type": "AI Model Training and Inference (GPU Clusters)",
+      "country": "Saudi Arabia",
+      "estimated_mw_impact": "500+ MW (xAI flagship alone)",
+      "time_horizon": "2025-2027",
+      "rationale": "HUMAIN deploying 600,000 NVIDIA GPUs. xAI operating 500 MW+ flagship. AWS AI Zone with 150,000 AI accelerators. AMD+HUMAIN 1 GW deal by 2030. AI training workloads drive 10-40x power intensity versus legacy cloud.",
+      "source_urls": [
+        "https://www.nytimes.com/2025/11/19/technology/saudi-arabia-elon-musk-xai.html",
+        "https://vision2030.ai/analysis/humain-ai-infrastructure/"
+      ]
+    },
+    {
+      "id": "DS-003",
+      "demand_type": "Data Localization / Government Cloud Migration",
+      "country": "Saudi Arabia",
+      "estimated_mw_impact": "100-200 MW incremental (government segment)",
+      "time_horizon": "2025-2028",
+      "rationale": "PDPL enforcement active (2025). Cloud-first directive mandates all ministries migrate to sovereign infrastructure. SDAIA Hexagon 480 MW government DC is the anchor. Financial sector requires in-KSA hosting (SAMA rules).",
+      "source_urls": [
+        "https://www.trade.gov/market-intelligence/saudi-arabia-ict-cross-border-data-transfer-rules-now-under-enforcement",
+        "https://www.gtlaw.com/en/insights/2026/1/saudi-arabias-data-centre-expansion-regulatory-framework-and-strategic-considerations"
+      ]
+    },
+    {
+      "id": "DS-004",
+      "demand_type": "Vision 2030 Diversification Projects (NEOM, Qiddiya, Red Sea, ROSHN, etc.)",
+      "country": "Saudi Arabia",
+      "estimated_mw_impact": "50-150 MW (smart city / real-time data processing)",
+      "time_horizon": "2025-2035",
+      "rationale": "Smart city projects demand edge compute and low-latency data processing. NEOM pivot to AI/DC directly converts planned megacity land into compute infrastructure. IOT, digital twin, autonomous systems all require local processing.",
+      "source_urls": [
+        "https://www.mobileeurope.co.uk/saudi-scales-back-neom-megaproject-plans-hub-for-ai-data-centres/"
+      ]
+    },
+    {
+      "id": "DS-005",
+      "demand_type": "AI/Cloud Demand — Government + Enterprise UAE (Banking, Energy, Healthcare)",
+      "country": "UAE",
+      "estimated_mw_impact": "200-400 MW incremental by 2028",
+      "time_horizon": "2025-2028",
+      "rationale": "UAE data center capacity to surge 165% to ~950 MW by 2028 (Emirates NBD Research). Banking (Emirates NBD $270M transformation), energy (ADNOC digital), telecom (e&, du). AI Vibrancy Tool ranks UAE 5th globally. National AI Strategy 2031 creates structural demand.",
+      "source_urls": [
+        "https://www.emiratesnbdresearch.com/-/media/emirates_nbd_research_-_macro_economics_10142025.pdf",
+        "https://www.woodmac.com/press-releases/uae-data-centre-power-demand-to-double-by-2030-as-regulatory-gaps-constrain-clean-energy-procurement/"
+      ]
+    },
+    {
+      "id": "DS-006",
+      "demand_type": "International AI Infrastructure Deployment (Export to Region)",
+      "country": "UAE",
+      "estimated_mw_impact": "1000-5000 MW (Stargate UAE campus)",
+      "time_horizon": "2026-2030",
+      "rationale": "UAE-US AI Campus (5 GW target) positions UAE as a hub to serve 2B+ people within 2,000-mile radius. OpenAI, NVIDIA, Oracle, Cisco, SoftBank as partners. US-UAE AI Acceleration Partnership endorsed at Presidential level (Trump/MBZ, May 2025).",
+      "source_urls": [
+        "https://openai.com/index/introducing-stargate-uae/",
+        "https://www.prnewswire.com/apac/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586440.html"
+      ]
+    },
+    {
+      "id": "DS-007",
+      "demand_type": "Cloud Services Market Growth (SaaS/IaaS/PaaS)",
+      "country": "GCC",
+      "estimated_mw_impact": "100-200 MW across GCC by 2029",
+      "time_horizon": "2025-2029",
+      "rationale": "GCC cloud services CAGR 9-11% through 2029. E-commerce, digital payments, streaming, gaming growing rapidly. Kuwait cloud market projected at $1.5B. Oman digital hub strategy. Qatar CAGR 17% to 2030.",
+      "source_urls": [
+        "https://www.computerweekly.com/feature/Middle-East-datacentre-capacity-set-to-triple-by-2030"
+      ]
+    },
+    {
+      "id": "DS-008",
+      "demand_type": "Saudi e-Commerce + FinTech Digital Infrastructure",
+      "country": "Saudi Arabia",
+      "estimated_mw_impact": "30-60 MW",
+      "time_horizon": "2025-2030",
+      "rationale": "Saudi e-commerce projected at $13B. IoT adoption exceeding 50 million units. Fintech regulatory sandbox expansion. SaaS platforms scaling. All require scalable cloud/DC capacity.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2025/12/11/3204133/28124/en/Insights-Into-Saudi-Arabia-s-1-5-Billion-Cloud-Data-Centers-Market-2025-2030-Growth-Prospects-and-Investment-Opportunities.html"
+      ]
+    },
+    {
+      "id": "DS-009",
+      "demand_type": "Energy Sector Digital Transformation (Aramco, ADNOC, QatarEnergy)",
+      "country": "Saudi Arabia / UAE / Qatar",
+      "estimated_mw_impact": "50-100 MW across the three countries",
+      "time_horizon": "2025-2028",
+      "rationale": "Saudi Aramco via Aramco Digital is a key DC customer (Groq partnership). ADNOC investing in digital twin and AI. QatarEnergy has data-heavy reservoir simulation and operations. National oil companies are anchor enterprise tenants.",
+      "source_urls": [
+        "https://vision2030.ai/analysis/humain-ai-infrastructure/"
+      ]
+    }
+  ],
+
+  "regulation_policy": [
+    {
+      "id": "REG-001",
+      "policy": "Personal Data Protection Law (PDPL) — Enforcement Active",
+      "country": "Saudi Arabia",
+      "summary": "SDAIA and NCA rolling out enforcement of PDPL. Data residency for government: in-KSA only (narrow exceptions). Financial sector: offshore hosting requires SAMA pre-approval; most default to in-KSA. Cross-border transfers require compliance assessment.",
+      "impact_local_vs_foreign": "Favors local/sovereign DC operators. Foreign hyperscalers must build/operate in-KSA or partner with local entities. Creates moat for first-movers (AWS, Google, Oracle, Microsoft) who committed early. Raises barrier for smaller foreign entrants.",
+      "impact_hyperscaler_vs_telco": "Hyperscalers with in-KSA regions (Google Dammam, Oracle Jeddah/Riyadh, and upcoming AWS/Microsoft) benefit. Telcos (STC/center3) benefit as domestic colo providers. Hyperscalers without local presence are locked out of government/regulated workloads.",
+      "barriers_to_entry": "CSP must register with CSTC; obtain class designation (A/B/C). Class determines permitted data classifications. Local entity requirements, audit rights, cybersecurity controls, incident-response frameworks. High capital requirement for in-country infrastructure.",
+      "source_urls": [
+        "https://www.trade.gov/market-intelligence/saudi-arabia-ict-cross-border-data-transfer-rules-now-under-enforcement",
+        "https://www.morganlewis.com/blogs/sourcingatmorganlewis/2026/03/saudi-arabia-cloud-compliance-part-1-data-residency-and-contractual-expectations",
+        "https://www.gtlaw.com/en/insights/2026/1/saudi-arabias-data-centre-expansion-regulatory-framework-and-strategic-considerations"
+      ]
+    },
+    {
+      "id": "REG-002",
+      "policy": "National Data Center Strategy — 1.5 GW by 2030 Target",
+      "country": "Saudi Arabia",
+      "summary": "Ministry of Communications and IT, in collaboration with SDAIA, launched national DC strategy in June 2025. Targets 1.5 GW of capacity by 2030. Cloud-first directive: all ministries must migrate legacy workloads to sovereign infrastructure. Cloud Computing Special Economic Zone (2023) provides tax benefits.",
+      "impact_local_vs_foreign": "Drives non-discretionary government demand that must be served locally. Tax incentives in Cloud SEZ lower cost of entry for foreign operators willing to build in-country.",
+      "impact_hyperscaler_vs_telco": "Creates large, predictable government demand pool that both hyperscalers and telcos can target. HUMAIN/PIF-backed infrastructure is the primary vehicle; private sector plays secondary/partner role.",
+      "barriers_to_entry": "Export control on US advanced AI chips (NVIDIA Blackwell) requires US government authorization for Saudi deployments — a significant regulatory risk for AI-specific workloads.",
+      "source_urls": [
+        "https://www.imarcgroup.com/saudi-arabia-data-center-market",
+        "https://www.gtlaw.com/en/insights/2026/1/saudi-arabias-data-centre-expansion-regulatory-framework-and-strategic-considerations"
+      ]
+    },
+    {
+      "id": "REG-003",
+      "policy": "UAE Federal Personal Data Protection Law (PDPL) + Sector-Specific Rules",
+      "country": "UAE",
+      "summary": "UAE PDPL regulates cross-border data transfers (GDPR-like principles). Sector rules for banking (CBUAE), healthcare, and telecom impose stricter localization. DIFC and ADGM operate independent data protection regimes. UAE Cybersecurity Council endorses sovereign cloud frameworks.",
+      "impact_local_vs_foreign": "Risk-based approach (vs. blanket localization) is more flexible than Saudi Arabia, making UAE easier for multi-national technology companies to operate. However, 66% of UAE organizations report full compliance with strict data protection rules (Cohesity 2025 survey) — market is maturing rapidly.",
+      "impact_hyperscaler_vs_telco": "e& + AWS Sovereign Launchpad (live Nov 2025) is the flagship sovereign cloud product. Telcos retain strategic positioning as sovereign gatekeepers. Hyperscalers partner with telcos rather than compete directly for regulated workloads.",
+      "barriers_to_entry": "US chip export restrictions complicate UAE AI infrastructure plans due to UAE's China ties. US-UAE AI Acceleration Partnership (May 2025) is easing but not fully resolved. Foreign companies must navigate DIFC/ADGM vs. federal regulatory differences.",
+      "source_urls": [
+        "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws",
+        "https://www.eand.com/en/news/3-nov-25-uae-sovereign-launchpad-offered-by-eand-and-powered-by-aws-is-now-live.html",
+        "https://jsis.washington.edu/news/cybersecurity-profile-2025-united-arab-emirates/"
+      ]
+    },
+    {
+      "id": "REG-004",
+      "policy": "UAE National AI Strategy 2031 + Dubai Universal Blueprint for AI (2024)",
+      "country": "UAE",
+      "summary": "National AI Strategy 2031 drives structural DC demand. Dubai AI Blueprint (2024) underpins du-Microsoft hyperscale deal. UAE aims to become global AI hub and digital gateway for Asia-Africa corridor.",
+      "impact_local_vs_foreign": "Welcomed by foreign hyperscalers; US partners gain privileged access via US-UAE strategic alignment. Chinese companies (Huawei) face scrutiny.",
+      "impact_hyperscaler_vs_telco": "Creates space for both; UAE government prefers US hyperscale partnerships (Stargate UAE) while using telcos as sovereign delivery vehicles.",
+      "barriers_to_entry": "US export controls on AI chips remain partial constraint. ADQ/Energy Capital Partners allocating $25B+ for power projects dedicated to DC growth — signals that energy infrastructure is the real constraint.",
+      "source_urls": [
+        "https://www.rcrwireless.com/20250428/ai-ml/du-ai-data-microsoft"
+      ]
+    },
+    {
+      "id": "REG-005",
+      "policy": "Saudi Arabia Energy Regulation (SERA) + Grid Connection Framework",
+      "country": "Saudi Arabia",
+      "summary": "SERA governs grid connection, capacity allocation, tariffs. Vision 2030 targets 50% renewables by 2030. Current energy mix ~60% gas/oil. Al Shuaiba solar (600 MW, 3.9 halala/kWh = ~$0.01/kWh) planned to supply AI data centers at ultra-low cost.",
+      "impact_local_vs_foreign": "Government-subsidized energy pricing (~$0.05/kWh blended) is a structural cost advantage vs. US ($0.09-0.15/kWh) and Europe. This favors development of export-oriented AI compute in Saudi Arabia.",
+      "impact_hyperscaler_vs_telco": "Hyperscalers benefit from dedicated power frameworks. Large projects (>100 MW) require 380 kV grid interconnects — effectively limiting sites to Dammam, Riyadh industrial belt, and NEOM.",
+      "barriers_to_entry": "High cooling costs offset cheap power (desert climate requires liquid/immersion cooling). Power grid upgrade lead times in suburban/greenfield areas can delay delivery.",
+      "source_urls": [
+        "https://www.economist.com/science-and-technology/2025/12/17/saudi-arabia-wants-to-host-the-worlds-cheapest-data-centres",
+        "https://www.spglobal.com/en/research-insights/special-reports/look-forward/data-center-frontiers/saudi-arabia-data-center-market"
+      ]
+    },
+    {
+      "id": "REG-006",
+      "policy": "Qatar Data Sovereignty + Government ICT Strategy",
+      "country": "Qatar",
+      "summary": "Qatar focuses on green DC (800 MW renewable capacity target; $1B+ renewable investment). 20% renewable share in national grid target. Regulatory framework supports sovereign and enterprise workloads. No blanket data localization law found; sector-specific rules apply.",
+      "impact_local_vs_foreign": "More open than Saudi Arabia; hyperscalers (Microsoft, Oracle, Google) serve Qatar from existing UAE/Bahrain regions with some local presence. Meeza is primary sovereign operator.",
+      "impact_hyperscaler_vs_telco": "Ooredoo and Meeza lead local; hyperscalers are present but not yet with dedicated Qatar regions.",
+      "barriers_to_entry": "Smaller market ($76M in 2024); limited hyperscale pipeline. Green energy goals may shape future DC procurement requirements.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/02/06/3233630/28124/en/qatar-green-data-center-market-report-2025-2030-ooredoo-q-p-s-c-vodafone-p-q-s-c-meeza-q-p-s-c-and-hyperscalers-microsoft-oracle-and-google-cloud-drive-expansion.html"
+      ]
+    }
+  ],
+
+  "partnerships_ecosystem": [
+    {
+      "id": "PE-001",
+      "classification": "Buy-From",
+      "buyer": "HUMAIN (PIF/Saudi Arabia)",
+      "seller": "NVIDIA",
+      "description": "HUMAIN purchasing 600,000 NVIDIA GPUs (GB300, Quantum-X800 InfiniBand). First tranche: 18,000 GB300 systems. US Commerce Dept authorized ~35,000 Blackwell equivalent. $10B+ total GPU spend implied.",
+      "country": "Saudi Arabia",
+      "source_urls": [
+        "https://nvidianews.nvidia.com/news/humain-and-nvidia-announce-strategic-partnership-to-build-ai-factories-of-the-future-in-saudi-arabia",
+        "https://vision2030.ai/analysis/humain-ai-infrastructure/"
+      ]
+    },
+    {
+      "id": "PE-002",
+      "classification": "Buy-From",
+      "buyer": "HUMAIN",
+      "seller": "AirTrunk (Blackstone)",
+      "description": "$3B partnership for hyperscale data center construction in Saudi Arabia. AirTrunk brings global hyperscale build expertise.",
+      "country": "Saudi Arabia",
+      "source_urls": [
+        "https://vision2030.ai/analysis/humain-ai-infrastructure/"
+      ]
+    },
+    {
+      "id": "PE-003",
+      "classification": "Buy-From",
+      "buyer": "HUMAIN",
+      "seller": "DataVolt",
+      "description": "$5B AI data center campus at NEOM Oxagon. DataVolt as developer/investor/operator. Net-zero design using seawater cooling.",
+      "country": "Saudi Arabia",
+      "source_urls": [
+        "https://www.neom.com/en-us/newsroom/datavolt-signs-agreement-with-neom"
+      ]
+    },
+    {
+      "id": "PE-004",
+      "classification": "Sell-To",
+      "seller": "AWS",
+      "buyer": "Saudi Government / HUMAIN",
+      "description": "$5B AWS-HUMAIN AI Zone. Up to 150,000 AI accelerators (GB300s + Trainium chips) in Riyadh. AWS commits to training 100,000 Saudi citizens in cloud/AI.",
+      "country": "Saudi Arabia",
+      "source_urls": [
+        "https://www.spglobal.com/en/research-insights/special-reports/look-forward/data-center-frontiers/saudi-arabia-data-center-market",
+        "https://vision2030.ai/analysis/humain-ai-infrastructure/"
+      ]
+    },
+    {
+      "id": "PE-005",
+      "classification": "Sell-With",
+      "party_a": "HUMAIN",
+      "party_b": "xAI",
+      "description": "xAI's first international data center hub outside US. 500 MW+ flagship. HUMAIN invests $3B in xAI Series E. Grok models deployed via HUMAIN ONE. GPU cluster: liquid-cooled, air-gapped.",
+      "country": "Saudi Arabia",
+      "source_urls": [
+        "https://www.nytimes.com/2025/11/19/technology/saudi-arabia-elon-musk-xai.html",
+        "https://www.cnbc.com/2026/02/19/saudis-humain-invested-3-billion-in-xais-series-e-funding-round.html"
+      ]
+    },
+    {
+      "id": "PE-006",
+      "classification": "Sell-With",
+      "party_a": "Google Cloud",
+      "party_b": "PIF / HUMAIN",
+      "description": "$10B joint AI hub in Saudi Arabia. Google provides Gemini, Imagen, Veo, TPU/GPU infrastructure. PIF/HUMAIN provides capital and market access.",
+      "country": "Saudi Arabia",
+      "source_urls": [
+        "https://www.googlecloudpresscorner.com/2025-05-13-Google-Cloud-and-PIF-Advance-AI-Hub-in-Saudi-Arabia"
+      ]
+    },
+    {
+      "id": "PE-007",
+      "classification": "Sell-With",
+      "party_a": "stc / center3",
+      "party_b": "HUMAIN",
+      "description": "JV to develop up to 1 GW AI data centers. center3 provides national colo footprint, connectivity, hyperscale scale; HUMAIN provides AI stack and capital.",
+      "country": "Saudi Arabia",
+      "source_urls": [
+        "https://meobserver.org/technology/2025/12/23/saudi-arabia-unveils-1gw-ai-data-centre-plan-through-stc-humain-jv/"
+      ]
+    },
+    {
+      "id": "PE-008",
+      "classification": "Sell-With",
+      "party_a": "HUMAIN",
+      "party_b": "AMD + Cisco",
+      "description": "$10B strategic collaboration. 1 GW AI infrastructure by 2030. First 100 MW phase commencing 2026. AMD and Cisco as exclusive technology partners.",
+      "country": "Saudi Arabia",
+      "source_urls": [
+        "https://vision2030.ai/analysis/humain-ai-infrastructure/"
+      ]
+    },
+    {
+      "id": "PE-009",
+      "classification": "Sell-With",
+      "party_a": "Microsoft",
+      "party_b": "G42 (via Khazna) — UAE",
+      "description": "$15.2B Microsoft UAE investment (2023-2029). $1.5B equity stake in G42. 200 MW expansion via Khazna. du-Microsoft AED 2B hyperscale DC in Dubai.",
+      "country": "UAE",
+      "source_urls": [
+        "https://blogs.microsoft.com/on-the-issues/2025/11/03/microsofts-15-2-billion-usd-investment-in-the-uae/",
+        "https://www.reuters.com/world/middle-east/microsoft-g42-announce-200-mw-data-centre-capacity-expansion-uae-2025-11-05/"
+      ]
+    },
+    {
+      "id": "PE-010",
+      "classification": "Sell-With",
+      "party_a": "OpenAI + Oracle + NVIDIA + Cisco + SoftBank",
+      "party_b": "G42 (UAE Stargate)",
+      "description": "Stargate UAE — 1 GW cluster in Abu Dhabi, part of 5 GW UAE-US AI Campus. OpenAI brings AI platform; G42/Khazna builds and operates; Oracle provides cloud/database; NVIDIA supplies GPUs; Cisco provides networking.",
+      "country": "UAE",
+      "source_urls": [
+        "https://openai.com/index/introducing-stargate-uae/"
+      ]
+    },
+    {
+      "id": "PE-011",
+      "classification": "Sell-With",
+      "party_a": "e& (Etisalat)",
+      "party_b": "AWS",
+      "description": "$1B+ alliance. UAE Sovereign Launchpad (live Nov 2025). e& wraps AWS for regulated/government UAE customers. 30,000 talent training program.",
+      "country": "UAE",
+      "source_urls": [
+        "https://press.aboutamazon.com/2024/10/aws-and-e-enter-into-1-billion-plus-agreement-as-part-of-new-strategic-alliance",
+        "https://www.eand.com/en/news/3-nov-25-uae-sovereign-launchpad-offered-by-eand-and-powered-by-aws-is-now-live.html"
+      ]
+    },
+    {
+      "id": "PE-012",
+      "classification": "Sell-To",
+      "seller": "Masdar (Abu Dhabi renewable energy)",
+      "buyer": "UAE Data Centers / EWEC grid",
+      "description": "Masdar 1 GW solar + battery hybrid project (Al Wathba area). Baseload renewable at competitive tariff (~AED6B+ capex). Operational by 2027. Designed specifically to serve AI/DC power demand. First subsidy-free baseload renewable in UAE.",
+      "country": "UAE",
+      "source_urls": [
+        "https://www.thenationalnews.com/business/energy/2025/10/24/mega-clean-energy-projects-to-boost-ai-and-data-centre-growth-in-the-uae-says-masdar/",
+        "https://www.forbes.com/sites/kensilverstein/2025/11/04/masdars-247-breakthrough-shows-how-renewables-can-power-the-ai-boom/"
+      ]
+    },
+    {
+      "id": "PE-013",
+      "classification": "Sell-To",
+      "seller": "Supermicro",
+      "buyer": "DataVolt / HUMAIN",
+      "description": "DataVolt signed USD $20B deal with Supermicro (May 2025) to deploy liquid-cooled hyperscale infrastructure across Saudi Arabia.",
+      "country": "Saudi Arabia",
+      "source_urls": [
+        "https://www.mordorintelligence.com/industry-reports/saudi-arabia-hyperscale-data-center-market"
+      ]
+    },
+    {
+      "id": "PE-014",
+      "classification": "Sell-With",
+      "party_a": "Oman (MTCIT/IDCA)",
+      "party_b": "International investors (TBD)",
+      "description": "Oman Digital Triangle seeking global AI, DC, and cloud providers to participate in three national digital hubs. GW-scale capacity target. No named anchor tenants yet.",
+      "country": "Oman",
+      "source_urls": [
+        "https://www.idc-a.org/news/idca/Sultanate-of-Oman-Signs-National-Digital-Hub-Development-Agreement-with-IDCA-to-Devise-Develop-and-B/9a6b5217-cda1-4543-97b0-70b10a7c47df"
+      ]
+    }
+  ],
+
+  "dashboard_metrics": {
+    "live_mw_by_country": {
+      "notes": "Best estimates from public sources; actual live IT load MW. Significant uncertainty at Saudi Arabia — market is in rapid transition.",
+      "Saudi_Arabia": {
+        "live_mw": 222,
+        "source_date": "Q1 2025",
+        "source": "S&P Global",
+        "source_url": "https://www.spglobal.com/en/research-insights/special-reports/look-forward/data-center-frontiers/saudi-arabia-data-center-market"
+      },
+      "UAE": {
+        "live_mw": 358,
+        "source_date": "Oct 2025",
+        "source": "Emirates NBD Research",
+        "source_url": "https://www.emiratesnbdresearch.com/-/media/emirates_nbd_research_-_macro_economics_10142025.pdf"
+      },
+      "Qatar": {
+        "live_mw": "~30-40 (Meeza alone; total market estimate 13 active facilities)",
+        "confidence": "LOW — no market-wide MW total found",
+        "source": "Meeza Q3 2025 Investor Call; Yahoo Finance"
+      },
+      "Oman": {
+        "live_mw": "~15-25 (estimated, no official total found)",
+        "confidence": "LOW",
+        "source": "Yahoo Finance market analysis"
+      },
+      "Bahrain": {
+        "live_mw": "~20-50 (estimated; AWS region + local DCs; no official total)",
+        "confidence": "LOW",
+        "source": "Arizton; AWS public sector blog"
+      },
+      "Kuwait": {
+        "live_mw": "~10-20 (very nascent market)",
+        "confidence": "LOW",
+        "source": "GlobeNewswire colocation report"
+      }
+    },
+    "announced_mw_by_country": {
+      "notes": "Sum of announced/under-construction MW. Figures overlap in some cases (e.g., HUMAIN targets vs. center3 JV). Treat as illustrative pipeline, not additive committed capacity.",
+      "Saudi_Arabia": {
+        "announced_pipeline_mw": "3500-5000+ (HUMAIN 1.9GW target + DataVolt 1.5GW + Hexagon 480MW + center3/HUMAIN JV 1GW + hyperscaler regions + Equinix 100MW + Alfanar + others)",
+        "confidence": "MEDIUM — significant double-counting risk across HUMAIN, center3 JV, and DataVolt figures",
+        "target_year": 2030
+      },
+      "UAE": {
+        "announced_pipeline_mw": "6000-7000 (5GW Stargate campus + 1GW Stargate UAE cluster + Khazna 1GW pipeline + du-Microsoft + others)",
+        "confidence": "LOW for 5GW total (not finalized); HIGH for 200MW near-term",
+        "target_year": "2026-2030"
+      },
+      "Qatar": {
+        "announced_pipeline_mw": "~40-50 (Meeza expansion; 5 pipeline facilities)",
+        "confidence": "MEDIUM"
+      },
+      "Oman": {
+        "announced_pipeline_mw": "GW-scale aspirational (ODT); 32 MW Gulf Data Hub (planning)",
+        "confidence": "LOW"
+      },
+      "Bahrain": {
+        "announced_pipeline_mw": "center3 regional expansion (MW not specified)",
+        "confidence": "LOW"
+      },
+      "Kuwait": {
+        "announced_pipeline_mw": "None identified",
+        "confidence": "N/A"
+      }
+    },
+    "top_players_by_known_announced_capacity": [
+      {"rank": 1, "player": "HUMAIN (PIF/Saudi Arabia)", "capacity_mw": "1900 (2030 target)", "country": "Saudi Arabia", "type": "AI/Sovereign"},
+      {"rank": 2, "player": "G42 / Khazna Data Centers", "capacity_mw": "1000+ (Stargate UAE) + 650 existing", "country": "UAE", "type": "AI/Hyperscale"},
+      {"rank": 3, "player": "DataVolt (NEOM)", "capacity_mw": "1500 (announced)", "country": "Saudi Arabia", "type": "AI"},
+      {"rank": 4, "player": "center3 / stc Group", "capacity_mw": "1000 (2030 target, incl. HUMAIN JV)", "country": "Saudi Arabia", "type": "Colo/AI"},
+      {"rank": 5, "player": "SDAIA (Hexagon)", "capacity_mw": "480 (announced)", "country": "Saudi Arabia", "type": "Sovereign/Government"},
+      {"rank": 6, "player": "Microsoft (UAE + KSA combined)", "capacity_mw": "300+ (estimated across G42/Khazna and KSA AZs)", "country": "UAE/Saudi Arabia", "type": "Hyperscale"},
+      {"rank": 7, "player": "AWS", "capacity_mw": "UNKNOWN — significant but undisclosed (Bahrain live; UAE live; KSA underway)", "country": "Bahrain/UAE/Saudi Arabia", "type": "Hyperscale"},
+      {"rank": 8, "player": "Google Cloud", "capacity_mw": "UNKNOWN — Dammam region live + $10B hub planned", "country": "Saudi Arabia", "type": "Hyperscale"},
+      {"rank": 9, "player": "Oracle", "capacity_mw": "UNKNOWN — three KSA regions (Jeddah, Riyadh, NEOM planned)", "country": "Saudi Arabia", "type": "Hyperscale"},
+      {"rank": 10, "player": "Meeza", "capacity_mw": "~50-60 (post-expansion, 2027)", "country": "Qatar", "type": "Colo/Sovereign"}
+    ],
+    "gcc_total_existing_capacity": {
+      "total_mw": "~850",
+      "upcoming_to_2028": "~3500",
+      "investment_to_2027": "~$8.5B",
+      "source": "GlobeNewswire GCC Portfolio Report (June 2025)",
+      "source_url": "https://www.globenewswire.com/news-release/2025/06/24/3103965/0/en/gcc-data-center-portfolio-report-2025-detailed-analysis-of-106-existing-and-77-upcoming-data-centers-across-bahrain-kuwait-oman-qatar-saudi-arabia-and-uae.html"
+    }
+  },
+
+  "watch_items": {
+    "oversupply_undersupply_hypotheses": [
+      {
+        "hypothesis": "Saudi Arabia AI capacity oversupply risk (2027-2030)",
+        "direction": "Potential oversupply",
+        "rationale": "Multiple overlapping GW-scale commitments: HUMAIN 1.9GW + DataVolt 1.5GW + center3 1GW JV + SDAIA 480MW + hyperscaler regions. Total announced significantly exceeds IMARC/S&P Global demand forecast of ~760 MW additional by 2030. Many projects are sovereign/government-mandated or backed by patient capital (PIF), reducing short-term discipline.",
+        "mitigants": "HUMAIN initial capacity reportedly already sold out. Government cloud migration mandate creates stable floor demand. AI training workloads are power-dense and difficult to forecast."
+      },
+      {
+        "hypothesis": "UAE hyperscale concentration risk / 5GW campus execution uncertainty",
+        "direction": "Execution risk",
+        "rationale": "5GW Stargate campus not yet finalized (US security concerns over UAE-China ties as of Oct 2025). Only 200MW phase has confirmed construction start. ADQ's $25B power infrastructure for DC growth is the real constraint.",
+        "mitigants": "US-UAE AI Acceleration Partnership at Presidential level. UAE ranked 5th globally in AI vibrancy. Strong G42/Khazna execution track record."
+      },
+      {
+        "hypothesis": "Kuwait and Oman structural undersupply",
+        "direction": "Undersupply",
+        "rationale": "Kuwait colocation occupancy projected at 90% by 2030 — essentially full. No large-scale projects announced. Oman ODT GW-scale plans aspirational with no anchor tenant. Both markets face risk of enterprises defaulting to UAE/Bahrain regions.",
+        "mitigants": "Oman has geographic diversity value. Kuwait digital economy growing at ~20%/year."
+      },
+      {
+        "hypothesis": "Qatar niche equilibrium",
+        "direction": "Balanced",
+        "rationale": "Meeza quadrupling serves organic growth. Limited appetite for hyperscale. Qatar has high GDP per capita, QatarEnergy as anchor, and strong government procurement — but small market size ($196M by 2030) limits scale.",
+        "mitigants": "Qatar sovereign fund (QIA) invested in Anthropic — signals interest in AI ecosystem.",
+        "source": "NYT article (Anthropic-QIA)"
+      }
+    ],
+    "pricing_watch": [
+      "Saudi Arabia energy subsidy sustainability: $0.05/kWh commercial rate depends on government subsidy framework. Vision 2030 market reforms may raise prices over time.",
+      "Colocation pricing pressure: Multiple entrants (Equinix, Khazna/G42, center3, Alfanar) competing in Riyadh/Dammam could compress rack rates for standard workloads by 2027.",
+      "AI GPU premium pricing: HUMAIN's buy-side leverage (600K GPU order) may influence NVIDIA pricing for regional competitors."
+    ],
+    "power_watch": [
+      "Saudi Arabia grid upgrade lead times: >100 MW sites require 380 kV interconnects; suburban/greenfield sites have 18-36 month power delivery timelines.",
+      "UAE energy constraint: Wood Mackenzie (March 2026) notes 'regulatory gaps constrain clean energy procurement' for UAE DCs. Masdar 1 GW hybrid project (2027) needed to prevent clean energy shortfall.",
+      "Cooling technology: Desert climate forces liquid/immersion cooling adoption (NEOM seawater, ICS Arabia immersion, HUMAIN liquid-cooled GPU systems). Operators without cooling expertise face PUE penalties."
+    ],
+    "supply_chain_watch": [
+      "NVIDIA Blackwell export controls: US Commerce Dept authorization for Saudi/UAE GPU imports is case-by-case and sensitive to geopolitical conditions. A deterioration in US-Gulf relations could delay AI buildout by 12-24 months.",
+      "Supermicro $20B DataVolt deal: Liquid-cooled server supply at this scale is a single-point-of-failure risk. Supermicro quality control history warrants monitoring.",
+      "Skilled labor: Saudi Nitaqat quotas require localization; HUMAIN and center3 running upskilling programs, but deep DC operations talent pool remains thin domestically."
+    ],
+    "regulatory_watch": [
+      "US AI chip export policy evolution: BIS rulemaking on AI diffusion (2025-2026) will shape which UAE/Saudi entities can receive Blackwell-class hardware and in what quantities.",
+      "Saudi CSTC cloud classification rules: CSP class designations (A/B/C) are still evolving; changes could materially affect which foreign operators can serve government workloads.",
+      "UAE-China technology ties: US concerns about Huawei/G42 proximity remain unresolved; a deterioration could delay Stargate UAE financing beyond initial 200 MW.",
+      "GCC cross-border data flow harmonization: No GCC-wide data sovereignty framework exists; operators with multi-country presence face patchwork compliance."
+    ]
+  },
+
+  "analyst_notes": {
+    "synthesis": "The GCC data center ecosystem has undergone a structural transformation since 2024, accelerating from a mid-tier regional cloud market to a front-rank global AI infrastructure battleground. Saudi Arabia has become the dominant force by pipeline volume, driven by PIF-backed sovereign AI strategy (HUMAIN), mandatory data localization, and the geopolitical alignment of US hyperscalers seeking Gulf capital and US government approval for advanced chip exports. The UAE retains the largest existing capacity base and the most advanced hyperscale-grade colocation ecosystem, anchored by G42/Khazna and the UAE-US AI Campus (Stargate UAE). Qatar, Oman, and Bahrain occupy distinct niches: Qatar via Meeza-led sovereign colocation and green energy; Bahrain as AWS's established GCC anchor; Oman as an aspirational but un-contracted AI hub. Kuwait is the most supply-constrained and underdeveloped market in the group.",
+    "key_risks": [
+      "MW figure inflation: Announced GW targets across Saudi Arabia are deeply overlapping. HUMAIN, center3 JV, and DataVolt/NEOM targets cannot simply be summed. Analyst estimates range from 3.5 GW to 8 GW of Saudi 'planned' capacity — a doubling-counting-induced spread that understates the uncertainty.",
+      "US chip export controls: The entire Saudi and UAE AI infrastructure thesis depends on US government willingness to authorize Blackwell-class GPU exports. This is a discretionary US foreign policy instrument, not a rule-based entitlement.",
+      "Execution capacity: Saudi Arabia has never built hyperscale data centers at this speed or scale. The talent, supply chain, and regulatory apparatus to deliver 1.9 GW by 2030 from a 222 MW base in 2025 is unprecedented.",
+      "Geopolitical concentration: The March 2026 regional infrastructure disruptions (AWS Bahrain/UAE) highlight that concentrating critical workloads in a single geopolitical zone — even one with excellent energy economics — carries tail risk."
+    ],
+    "strategic_opportunities": [
+      "Liquid cooling supply chain: The shift to >50 kW/rack AI workloads in a hot climate is creating a structural opportunity for immersion and direct-to-chip cooling vendors (Vertiv, Schneider, Asetek, regional specialists).",
+      "Sovereign cloud middleware: The data localization mandates across KSA and UAE are creating demand for sovereign cloud wrapping services (e.g., InCountry, e& Sovereign Launchpad model) — a B2B SaaS play on regulatory compliance.",
+      "Edge DC for 5G/IoT: Saudi Arabia's 5G rollout and NEOM smart-city pivot are creating edge compute demand at city and district scale — distinct from hyperscale campuses.",
+      "Arabic LLM infrastructure: HUMAIN's mandate to develop Arabic large language models creates demand for AI training runs of a scale that will fill 100+ MW of dedicated GPU capacity."
+    ]
+  }
+}

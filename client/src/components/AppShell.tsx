@@ -12,6 +12,7 @@ import {
   Sun,
   Moon,
   Menu,
+  Archive,
 } from "lucide-react";
 import { useState } from "react";
 import { Logo } from "./Logo";
@@ -29,6 +30,7 @@ const NAV = [
   { path: "/strategy", label: "Strategic Insights", icon: Lightbulb, testId: "nav-strategy" },
   { path: "/weak-signals", label: "Weak Signals", icon: Radio, testId: "nav-weak-signals" },
   { path: "/console", label: "Monitoring Console", icon: Activity, testId: "nav-console" },
+  { path: "/archives", label: "Archives", icon: Archive, testId: "nav-archives" },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {

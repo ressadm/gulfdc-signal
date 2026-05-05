@@ -16,6 +16,7 @@ import Partnerships from "@/pages/Partnerships";
 import Strategy from "@/pages/Strategy";
 import WeakSignals from "@/pages/WeakSignals";
 import Console from "@/pages/Console";
+import Archives from "@/pages/Archives";
 
 function AppRouter() {
   return (
@@ -29,6 +30,7 @@ function AppRouter() {
       <Route path="/strategy" component={Strategy} />
       <Route path="/weak-signals" component={WeakSignals} />
       <Route path="/console" component={Console} />
+      <Route path="/archives" component={Archives} />
       <Route component={NotFound} />
     </Switch>
   );
