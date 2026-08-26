@@ -60,7 +60,7 @@ export default function SupplyTracker() {
       <PageHeader
         eyebrow="Supply Tracker"
         title="All known supply events across the GCC"
-        description="Every announced, under-construction or live data center event in the seed window. Saudi-first sorted; filter by country, type, stage, credibility. Source URLs preserved on every card."
+        description="Every announced, under-construction or live data center event in the current window. Saudi-first sorted; filter by country, type, stage, credibility. Source URLs preserved on every card."
       >
         <span
           className="inline-flex items-center gap-1.5 rounded border border-border bg-card px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground"
@@ -185,7 +185,7 @@ function SupplyCard({ event: e }: { event: SupplyEvent }) {
                 {mw.toLocaleString()}
               </div>
               <div className="font-mono text-[9px] uppercase tracking-widest text-primary/80">
-                MW peak
+                Ann. MW
               </div>
             </div>
           )}
@@ -193,6 +193,8 @@ function SupplyCard({ event: e }: { event: SupplyEvent }) {
       </header>
 
       <div className="space-y-2.5 p-4">
+        <CapacitySplit event={e} />
+
         <div className="grid gap-2 text-xs sm:grid-cols-2">
           <div className="flex items-start gap-2">
             <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" />
@@ -246,6 +248,40 @@ function SupplyCard({ event: e }: { event: SupplyEvent }) {
         <SourceLinks urls={e.source_urls} />
       </div>
     </article>
+  );
+}
+
+function formatCapacityValue(value: unknown, suffix = " MW") {
+  if (value === undefined || value === null || value === "") return "—";
+  if (typeof value === "number") return `${value.toLocaleString()}${suffix}`;
+  return String(value);
+}
+
+function CapacitySplit({ event }: { event: SupplyEvent }) {
+  const c = event.capacity_mw ?? {};
+  const chips = [
+    ["Live IT", c.mw_it_live],
+    ["Announced", c.mw_announced],
+    ["Under constr.", c.mw_under_construction_or_commissioning ?? c.mw_under_construction_or_contracted],
+    ["Power", c.power_gw_available, " GW"],
+  ].filter(([, value]) => value !== undefined && value !== null);
+  if (chips.length === 0 && !c.energisation_evidence) return null;
+  return (
+    <div className="rounded-md border border-border/60 bg-background/35 p-2.5 text-xs">
+      <div className="mb-2 flex flex-wrap gap-1.5">
+        {chips.map(([label, value, suffix]) => (
+          <span key={String(label)} className="inline-flex items-baseline gap-1 rounded border border-border bg-card px-2 py-1">
+            <span className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground">{label}</span>
+            <span className="num font-semibold tabular-nums text-foreground/90">{formatCapacityValue(value, String(suffix ?? " MW"))}</span>
+          </span>
+        ))}
+      </div>
+      {c.energisation_evidence && (
+        <p className="text-[11px] leading-relaxed text-muted-foreground">
+          <span className="font-mono uppercase tracking-wider">Evidence:</span> {String(c.energisation_evidence)}
+        </p>
+      )}
+    </div>
   );
 }
 

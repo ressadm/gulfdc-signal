@@ -24,7 +24,7 @@ interface SourceCategory {
   icon: any;
   examples: string[];
   cadence: "Daily" | "Weekly" | "Monthly" | "Continuous";
-  state: "Manual seed" | "Stub" | "Planned";
+  state: "Manual current" | "Stub" | "Planned";
 }
 
 const SOURCES: SourceCategory[] = [
@@ -41,7 +41,7 @@ const SOURCES: SourceCategory[] = [
       "center3 Newsroom",
     ],
     cadence: "Daily",
-    state: "Manual seed",
+    state: "Manual current",
   },
   {
     key: "research",
@@ -56,7 +56,7 @@ const SOURCES: SourceCategory[] = [
       "Reuters",
     ],
     cadence: "Weekly",
-    state: "Manual seed",
+    state: "Manual current",
   },
   {
     key: "regulator",
@@ -169,14 +169,14 @@ const RUBRIC = [
 const REFRESH_STEPS = [
   {
     n: 1,
-    title: "Crawl",
+    title: "Collect",
     desc: "Pull deltas from each source category since last run; tag with category, country, and entities.",
     state: "stub",
   },
   {
     n: 2,
     title: "Normalize",
-    desc: "Extract structured fields (company, MW, location, stage, timeline) into the same schema as the seed dataset.",
+    desc: "Extract structured fields (company, MW, location, stage, timeline) into the same schema as the current dataset.",
     state: "stub",
   },
   {
@@ -207,11 +207,11 @@ export default function Console() {
       <PageHeader
         eyebrow="Monitoring Console"
         title="Source coverage, watchlists, credibility rubric, refresh workflow"
-        description="Operational scaffolding for continuous monitoring. Today the dataset is a manually-curated seed; this page documents how the pipeline is structured to be wired to automated crawlers, news APIs and regulator feeds."
+        description="Operational scaffolding for continuous monitoring. Today the dataset is a manually-curated seed; this page documents how the pipeline is structured to be wired to automated collecters, news APIs and regulator feeds."
       >
         <SignalPill tone="watch" testId="status-mode">
           <Info className="h-3 w-3" />
-          Mode: Manual seed
+          Mode: Manual current
         </SignalPill>
       </PageHeader>
 
@@ -239,7 +239,7 @@ export default function Console() {
                   </div>
                   <SignalPill
                     tone={
-                      s.state === "Manual seed"
+                      s.state === "Manual current"
                         ? "info"
                         : s.state === "Stub"
                         ? "watch"
@@ -274,7 +274,7 @@ export default function Console() {
                 </div>
                 {demoConnect === s.key && (
                   <p className="mt-2 rounded border border-border/60 bg-muted/40 p-2 text-[10px] leading-relaxed text-muted-foreground">
-                    Connector stub. In production this would route to a crawler / API
+                    Connector stub. In production this would route to a collecter / API
                     integration (RSS, JSON feed, regulator portal, or scheduled
                     headless-browser job). No live connector is wired in this build.
                   </p>
@@ -350,9 +350,9 @@ export default function Console() {
           </ol>
           <p className="mt-3 rounded-md border border-border/60 bg-muted/40 p-3 text-[11px] leading-relaxed text-muted-foreground">
             <Info className="mr-1 inline-block h-3 w-3 align-text-bottom" />
-            This build does not fetch live data. The seed dataset (<span className="font-mono">{dataset._meta.compiled}</span>)
+            This build does not fetch live data. The current dataset (<span className="font-mono">{dataset._meta.compiled}</span>)
             is the only source of truth. The console documents the intended pipeline so backend
-            crawlers / news APIs can be plugged into the same schema without UI changes.
+            collecters / news APIs can be plugged into the same schema without UI changes.
           </p>
           <p className="mt-2 rounded-md border border-primary/20 bg-primary/10 p-3 text-[11px] leading-relaxed text-foreground/85">
             Weekly refreshes are versioned: archive the previous <span className="font-mono">current.json</span>,

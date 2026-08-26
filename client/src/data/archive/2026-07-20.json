@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "dataset": "GulfDC Signal public dataset archive",
+    "version": "1.1.0",
+    "compiled": "2026-07-20",
+    "window": "Pending refresh package through 2026-07-20",
+    "public_url": "https://ressadm.github.io/gulfdc-signal/",
+    "repo_url": "https://github.com/ressadm/gulfdc-signal",
+    "schema_version": "mw-split-v2",
+    "release_notes": [
+      "July 20 package preserved to prevent loss of the first post-May refresh state.",
+      "Tracked early HUMAIN/center3, Zoom Saudi, MEEZA/Ooredoo and Oman/Kuwait setup signals before the later July/August deltas."
+    ],
+    "mw_note": "MW fields are intentionally split so non-binding awards, programme ambitions and power availability do not inflate live IT-load capacity.",
+    "disclaimer": "Research intelligence only; capacity estimates remain provisional where primary energisation, contract or operator data is unavailable."
+  },
+  "supply_events": [
+    {
+      "id": "A0720-SA-CENTER3-HUMAIN",
+      "date": "2026-07-20",
+      "title": "center3/stc and HUMAIN AI infrastructure JV retained as July 20 package item",
+      "country": "Saudi Arabia",
+      "status": "announced_programme",
+      "category": "platform",
+      "impact": "Programme pipeline; not live.",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 250,
+        "programme_ambition_mw": 1000,
+        "energisation_evidence": "July 20 package; no live evidence."
+      },
+      "source_urls": [],
+      "credibility": "medium",
+      "inflation_notes": "Avoid overlap with later HUMAIN awards.",
+      "strategic_implication": "Telecom/DC partnerships were the key July setup signal."
+    },
+    {
+      "id": "A0720-ZOOM-SA",
+      "date": "2026-07-20",
+      "title": "Zoom second Saudi data-centre node tracked as cloud demand signal",
+      "country": "Saudi Arabia",
+      "status": "live_service",
+      "category": "demand",
+      "impact": "No MW disclosed.",
+      "capacity_mw": {
+        "mw_it_live": null,
+        "mw_announced": null,
+        "energisation_evidence": "Service node announcement; no MW."
+      },
+      "source_urls": [
+        "https://news.zoom.us/zoom-launches-second-data-center-in-saudi-arabia/"
+      ],
+      "credibility": "medium",
+      "inflation_notes": "Demand signal only.",
+      "strategic_implication": "Enterprise cloud localization reinforces Saudi demand."
+    },
+    {
+      "id": "A0720-QATAR-MEEZA-OORD",
+      "date": "2026-07-20",
+      "title": "MEEZA/Ooredoo Qatar capacity records retained pending later August split",
+      "country": "Qatar",
+      "status": "baseline_pending",
+      "category": "capacity",
+      "impact": "Earlier Qatar package state before Aug 26 live/announced split.",
+      "capacity_mw": {
+        "mw_it_live": null,
+        "mw_announced": null,
+        "energisation_evidence": "Superseded by Aug 26 split."
+      },
+      "source_urls": [
+        "https://www.zawya.com/en/business/technology-and-telecom/qatar-meeza-to-quadruple-data-centre-capacity-in-next-four-years-hgo09irc",
+        "https://www.ooredoo.com/en/media/news_view/ooredoo-group-launches-syntys-a-new-global-ai-data-center-platform/"
+      ],
+      "credibility": "medium",
+      "inflation_notes": "Use Aug 26 for current MW accounting.",
+      "strategic_implication": "Qatar was already a watch market before the financing update."
+    }
+  ],
+  "demand_signals": [
+    {
+      "id": "A0720-D-ZOOM",
+      "date": "2026-07-20",
+      "title": "Zoom Saudi localization demand signal",
+      "country": "Saudi Arabia",
+      "demand_type": "enterprise_cloud",
+      "estimated_mw_impact": "No MW disclosed",
+      "time_horizon": "near-term",
+      "rationale": "Retained from July 20 package.",
+      "source_urls": [
+        "https://news.zoom.us/zoom-launches-second-data-center-in-saudi-arabia/"
+      ],
+      "credibility": "medium"
+    }
+  ],
+  "regulation_policy": [],
+  "partnerships": [],
+  "dashboard_metrics": {
+    "country_mw_split": [],
+    "live_mw_by_country": {},
+    "announced_mw_by_country": {},
+    "top_players_by_known_announced_capacity": [],
+    "gcc_total_existing_capacity": {
+      "total_mw": "Archive snapshot - see package records",
+      "method": "Package-level archive retained for state continuity."
+    }
+  },
+  "watch_items": [],
+  "analyst_notes": []
+}

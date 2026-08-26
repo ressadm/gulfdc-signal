@@ -1,0 +1,199 @@
+{
+  "_meta": {
+    "dataset": "GulfDC Signal public dataset archive",
+    "version": "1.3.0",
+    "compiled": "2026-08-03",
+    "window": "Pending refresh package through 2026-08-03",
+    "public_url": "https://ressadm.github.io/gulfdc-signal/",
+    "repo_url": "https://github.com/ressadm/gulfdc-signal",
+    "schema_version": "mw-split-v2",
+    "release_notes": [
+      "August 3 package added MEEZA 4 MW expansion, MEEZA 44 MW facility, Hexagon 480 MW Saudi AI factory, AWS Bahrain unavailability, Saudi national targets and Article 26 AI-training exception.",
+      "Capacity treatment was updated to avoid adding finance facilities, regulatory targets and outage records to live MW."
+    ],
+    "mw_note": "MW fields are intentionally split so non-binding awards, programme ambitions and power availability do not inflate live IT-load capacity.",
+    "disclaimer": "Research intelligence only; capacity estimates remain provisional where primary energisation, contract or operator data is unavailable."
+  },
+  "supply_events": [
+    {
+      "id": "SA-SDCF1-480-260803",
+      "date": "2026-08-03",
+      "title": "SDAIA/Hexagon/AlBawani 480 MW AI factory proposal remains announced/pre-FID",
+      "country": "Saudi Arabia",
+      "status": "announced_pre_fid",
+      "category": "ai_factory",
+      "impact": "Saudi announced pipeline item retained as non-live capacity.",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 480,
+        "energisation_evidence": "Prior package; no energisation evidence in August 26 report."
+      },
+      "source_urls": [],
+      "credibility": "medium",
+      "inflation_notes": "Retain as announced/non-binding until a project company, offtake and construction notice are visible.",
+      "strategic_implication": "Illustrates volume of Saudi AI DC ambition that can overstate deliverable 2026 supply."
+    },
+    {
+      "id": "QA-MEEZA-260826",
+      "date": "2026-08-26",
+      "title": "MEEZA secures QAR 1.6bn facility to fund ~44 MW build-out after +4 MW expansion",
+      "country": "Qatar",
+      "status": "live_and_financed_pipeline",
+      "category": "capacity_financing",
+      "impact": "Separates current live estimate from financed growth.",
+      "capacity_mw": {
+        "mw_it_live": 18,
+        "mw_announced": 44,
+        "financing_qAR_bn": 1.6,
+        "programme_ambition_mw": 60,
+        "energisation_evidence": "Approved report infers ~18 MW current footprint; QAR 1.6bn facility funds ~44 MW build-out; +4 MW hyperscaler expansion delivered ahead of schedule."
+      },
+      "source_urls": [
+        "https://www.linkedin.com/pulse/meeza-connect-august-2026-meeza-a-qatar-foundation-venture-38kyf",
+        "https://www.structureresearch.net/2026/08/14/meeza-secures-438m-facility-to-fund-44mw-qatar-build-out/",
+        "https://www.meeza.net/meeza-successfully-delivers-strategic-4mw-data-centre-expansion-to-a-leading-global-hyper-scaler-nine-months-ahead-of-schedule/",
+        "https://www.zawya.com/en/business/technology-and-telecom/qatar-meeza-to-quadruple-data-centre-capacity-in-next-four-years-hgo09irc"
+      ],
+      "credibility": "high",
+      "inflation_notes": "Financing and expansion do not imply immediate live MW; use ~18 MW live and 44 MW pipeline.",
+      "strategic_implication": "Qatar is moving from telecom/cloud services into bank-financed data-centre expansion."
+    },
+    {
+      "id": "BH-AWS-REGION-260803",
+      "date": "2026-08-03",
+      "title": "AWS Bahrain region service availability risk remains unresolved in tracker",
+      "country": "Bahrain",
+      "status": "service_unavailable",
+      "category": "resilience",
+      "impact": "Bahrain capacity not converted into live GulfDC MW because public MW and availability are uncertain.",
+      "capacity_mw": {
+        "mw_it_live": null,
+        "mw_announced": 0,
+        "resilience_status": "existing Elastic deployments inaccessible; region removed from new deployment selection",
+        "energisation_evidence": "Elastic status page, not MW disclosure."
+      },
+      "source_urls": [
+        "https://status.elastic.co/"
+      ],
+      "credibility": "high",
+      "inflation_notes": "Treat as cloud-service risk, not a capacity estimate.",
+      "strategic_implication": "Regional DR plans should not assume Bahrain services are always selectable."
+    },
+    {
+      "id": "A0803-MEEZA-4MW",
+      "date": "2026-08-03",
+      "title": "MEEZA +4 MW hyperscaler expansion delivered ahead of schedule",
+      "country": "Qatar",
+      "status": "live_expansion",
+      "category": "capacity",
+      "impact": "Added in Aug 3 package and rolled into Aug 26 live estimate.",
+      "capacity_mw": {
+        "mw_it_live": 4,
+        "mw_announced": 0,
+        "energisation_evidence": "MEEZA announcement of 4 MW delivery."
+      },
+      "source_urls": [
+        "https://www.meeza.net/meeza-successfully-delivers-strategic-4mw-data-centre-expansion-to-a-leading-global-hyper-scaler-nine-months-ahead-of-schedule/"
+      ],
+      "credibility": "high",
+      "inflation_notes": "Do not add separately on top of Aug 26 ~18 MW live estimate if already included.",
+      "strategic_implication": "Hyperscaler tenancy improves MEEZA credibility."
+    },
+    {
+      "id": "A0803-SA-TARGETS",
+      "date": "2026-08-03",
+      "title": "Saudi national data-centre targets 3 GW by 2030 and 6.9 GW by 2034",
+      "country": "Saudi Arabia",
+      "status": "policy_target",
+      "category": "capacity_target",
+      "impact": "Targets and available power separated from live MW.",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 0,
+        "programme_ambition_mw": 6900,
+        "power_gw_available": 12.8,
+        "energisation_evidence": "National target/power claim, not live IT load."
+      },
+      "source_urls": [
+        "https://www.consultancy-me.com/news/14033/the-financing-challenge-behind-saudi-arabias-data-center-boom",
+        "https://www.ksa.com/economy/saudi-arabia-digital-economy-advanced-infrastructure/"
+      ],
+      "credibility": "medium",
+      "inflation_notes": "Do not count target capacity as announced deliverable project MW.",
+      "strategic_implication": "Useful for policy ambition and power-availability framing."
+    }
+  ],
+  "demand_signals": [],
+  "regulation_policy": [
+    {
+      "id": "REG-SA-TARGETS-260826",
+      "date": "2026-08-26",
+      "title": "Saudi targets 3 GW of data-centre capacity by 2030 and 6.9 GW by 2034 with 12.8 GW power availability claim",
+      "country": "Saudi Arabia",
+      "policy_type": "national_target",
+      "impact": "Clarifies that power availability and targets are not live IT-load capacity.",
+      "source_urls": [
+        "https://www.consultancy-me.com/news/14033/the-financing-challenge-behind-saudi-arabias-data-center-boom",
+        "https://www.ksa.com/economy/saudi-arabia-digital-economy-advanced-infrastructure/"
+      ],
+      "credibility": "medium"
+    },
+    {
+      "id": "REG-SA-COPYRIGHT-260803",
+      "date": "2026-08-03",
+      "title": "Saudi Copyright Law M/169 Article 26 AI-training exception tracked as regulatory demand catalyst",
+      "country": "Saudi Arabia",
+      "policy_type": "ai_regulation",
+      "impact": "May improve AI model training legal certainty but does not create MW by itself.",
+      "source_urls": [],
+      "credibility": "medium"
+    },
+    {
+      "id": "REG-BH-RESILIENCE-260826",
+      "date": "2026-08-26",
+      "title": "Bahrain availability incidents should feed resilience and DR diligence",
+      "country": "Bahrain",
+      "policy_type": "resilience",
+      "impact": "Status-page evidence should be separated from low-cred geopolitical reports.",
+      "source_urls": [
+        "https://status.elastic.co/"
+      ],
+      "credibility": "high"
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "P-MEEZA-BANKS-260826",
+      "date": "2026-08-26",
+      "title": "MEEZA QAR 1.6bn facility for 44 MW build-out",
+      "partners": [
+        "MEEZA",
+        "Dukhan Bank / lenders"
+      ],
+      "country": "Qatar",
+      "partnership_type": "capacity_financing",
+      "capacity_mw": {
+        "mw_it_live": 18,
+        "mw_announced": 44
+      },
+      "status": "financed_pipeline",
+      "source_urls": [
+        "https://www.linkedin.com/pulse/meeza-connect-august-2026-meeza-a-qatar-foundation-venture-38kyf",
+        "https://www.structureresearch.net/2026/08/14/meeza-secures-438m-facility-to-fund-44mw-qatar-build-out/"
+      ],
+      "credibility": "high"
+    }
+  ],
+  "dashboard_metrics": {
+    "country_mw_split": [],
+    "live_mw_by_country": {},
+    "announced_mw_by_country": {},
+    "top_players_by_known_announced_capacity": [],
+    "gcc_total_existing_capacity": {
+      "total_mw": "Archive snapshot - see package records",
+      "method": "Package-level archive retained for state continuity."
+    }
+  },
+  "watch_items": [],
+  "analyst_notes": []
+}

@@ -92,7 +92,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 data-testid="status-dataset"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--signal-live))]" />
-                Seed
+                Live
               </span>
             </div>
             <div className="mt-1 leading-tight">
@@ -125,6 +125,17 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
               GCC Data Center Intelligence
             </span>
+            {dataset._meta.public_url && (
+              <a
+                href={dataset._meta.public_url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="hidden truncate rounded border border-border px-2 py-1 font-mono text-[10px] text-primary underline-offset-2 hover:underline md:inline"
+                data-testid="link-public-url"
+              >
+                Public: {dataset._meta.public_url}
+              </a>
+            )}
           </div>
           <div className="ml-auto flex items-center gap-2">
             <span

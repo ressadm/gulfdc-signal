@@ -1,0 +1,280 @@
+{
+  "_meta": {
+    "dataset": "GulfDC Signal public dataset archive",
+    "version": "1.2.0",
+    "compiled": "2026-07-27",
+    "window": "Pending refresh package through 2026-07-27",
+    "public_url": "https://ressadm.github.io/gulfdc-signal/",
+    "repo_url": "https://github.com/ressadm/gulfdc-signal",
+    "schema_version": "mw-split-v2",
+    "release_notes": [
+      "July 27 package added MIS/SDCF1 48 MW MoU, DataVolt Riyadh East 44 MW, HUMAIN/Cohere, Zoom Saudi, e&/Core42, Syntys/Q Data, Oman-IX, Oman green DC JDA and Bahrain/AWS watch item.",
+      "Non-GCC/outbound or no-MW items are retained as strategy/demand signals, not live capacity."
+    ],
+    "mw_note": "MW fields are intentionally split so non-binding awards, programme ambitions and power availability do not inflate live IT-load capacity.",
+    "disclaimer": "Research intelligence only; capacity estimates remain provisional where primary energisation, contract or operator data is unavailable."
+  },
+  "supply_events": [
+    {
+      "id": "SA-MIS-SDCF1-270727",
+      "date": "2026-07-22",
+      "title": "MIS and Saudi Data Center Fund 1 sign MoU for three data centres totalling ~48 MW",
+      "country": "Saudi Arabia",
+      "status": "mou",
+      "category": "supply_pipeline",
+      "impact": "Adds mid-market Saudi pipeline but not live capacity.",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 48,
+        "energisation_evidence": "MoU for development across Riyadh, Dammam and Jeddah; no energisation disclosed."
+      },
+      "source_urls": [
+        "https://www.sahmcapital.com/news/content/mis-signs-mou-to-develop-three-data-centers-48-mw-2026-07-22"
+      ],
+      "credibility": "high",
+      "inflation_notes": "MoU only; exclude from live and watch for land/power/construction triggers.",
+      "strategic_implication": "Shows local capital partnering with system integrators for distributed Saudi supply."
+    },
+    {
+      "id": "SA-DATAVOLT-RIYADH-EAST-270727",
+      "date": "2026-07-27",
+      "title": "DataVolt Riyadh East 44 MW campus with 36 MW HUMAIN anchor retained as prior-package pipeline",
+      "country": "Saudi Arabia",
+      "status": "announced",
+      "category": "anchor_leasing",
+      "impact": "Prior pending package retained for archive continuity.",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 44,
+        "energisation_evidence": "Prior package indicates first phase by end-2026; no live evidence in August 26 report."
+      },
+      "source_urls": [],
+      "credibility": "medium",
+      "inflation_notes": "Track against HUMAIN anchor to avoid double counting with wider Saudi/HUMAIN programme claims.",
+      "strategic_implication": "Anchored demand can accelerate financing if power interconnect milestones hold."
+    },
+    {
+      "id": "SA-CENTER3-HUMAIN-JV-270720",
+      "date": "2026-07-20",
+      "title": "center3/stc and HUMAIN AI infrastructure JV tracked as programme pipeline",
+      "country": "Saudi Arabia",
+      "status": "announced_programme",
+      "category": "platform",
+      "impact": "Programme capacity kept separate from live MW.",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 250,
+        "programme_ambition_mw": 1000,
+        "energisation_evidence": "Prior package tracked intended initial/target capacity; no Aug 26 live evidence."
+      },
+      "source_urls": [],
+      "credibility": "medium",
+      "inflation_notes": "Potential overlap with HUMAIN procurement awards; avoid summing programme ambition with awarded contractor scope.",
+      "strategic_implication": "Telecom-owned platforms remain central to Saudi sovereign AI hosting strategy."
+    },
+    {
+      "id": "OM-GREEN-DC-JDA-270727",
+      "date": "2026-07-27",
+      "title": "Oman five-party 150 MW green data-centre JDA retained as pre-FID pipeline",
+      "country": "Oman",
+      "status": "pre_fid",
+      "category": "green_dc",
+      "impact": "Prior package retained outside live capacity.",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 150,
+        "energisation_evidence": "JDA / pre-FID; no Aug 26 live evidence."
+      },
+      "source_urls": [],
+      "credibility": "medium",
+      "inflation_notes": "Pre-FID only; watch for PPAs, land and grid interconnect.",
+      "strategic_implication": "Potentially relevant for sustainability-driven AI workloads if it reaches FID."
+    },
+    {
+      "id": "A0727-HUMAIN-COHERE",
+      "date": "2026-07-27",
+      "title": "HUMAIN x Cohere >=50 MW AI platform target retained from July 27 package",
+      "country": "Saudi Arabia",
+      "status": "announced",
+      "category": "ai_platform",
+      "impact": "Demand-linked capacity reference; not live.",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 50,
+        "energisation_evidence": "Partnership target; no live evidence."
+      },
+      "source_urls": [
+        "https://cohere.com/blog/humain-cohere-partnership"
+      ],
+      "credibility": "medium",
+      "inflation_notes": "Watch for overlap with other HUMAIN capacity awards.",
+      "strategic_implication": "Foundation-model partnerships are likely anchor demand for local AI infrastructure."
+    },
+    {
+      "id": "A0727-SYNTYS-QDATA",
+      "date": "2026-07-27",
+      "title": "Syntys acquires Q Data QFZ with 5 MW live and 7.5 MW under development in July 27 package",
+      "country": "Qatar",
+      "status": "live_and_under_construction",
+      "category": "capacity",
+      "impact": "Superseded by Aug 26 Syntys group/Qatar split.",
+      "capacity_mw": {
+        "mw_it_live": 5,
+        "mw_under_construction_or_commissioning": 7.5,
+        "mw_announced": 7.5,
+        "energisation_evidence": "July 27 acquisition package."
+      },
+      "source_urls": [
+        "https://www.ooredoo.com/en/media/news_view/ooredoo-group-launches-syntys-a-new-global-ai-data-center-platform/"
+      ],
+      "credibility": "medium",
+      "inflation_notes": "Use Aug 26 Ooredoo/Syntys split for current dashboard.",
+      "strategic_implication": "Qatar entered the tracked live-capacity map before the August financing update."
+    },
+    {
+      "id": "A0727-OMAN-IX",
+      "date": "2026-07-27",
+      "title": "Oman-IX launches at Equinix MC1 Muscat",
+      "country": "Oman",
+      "status": "live_service",
+      "category": "interconnection",
+      "impact": "Internet-exchange service; no MW.",
+      "capacity_mw": {
+        "mw_it_live": null,
+        "mw_announced": null,
+        "energisation_evidence": "Service launch, no IT-load disclosure."
+      },
+      "source_urls": [
+        "https://www.equinix.com/newsroom/press-releases/2026/07/equinix-and-oman-ix-launch-new-internet-exchange-in-oman"
+      ],
+      "credibility": "medium",
+      "inflation_notes": "Connectivity signal only.",
+      "strategic_implication": "Interconnection improves Oman readiness for future DC demand."
+    }
+  ],
+  "demand_signals": [
+    {
+      "id": "D-ZOOM-SAUDI-270727",
+      "date": "2026-07-27",
+      "title": "Zoom second Saudi data-centre node retained as enterprise cloud demand signal",
+      "country": "Saudi Arabia",
+      "demand_type": "enterprise_cloud",
+      "estimated_mw_impact": "No MW disclosed",
+      "time_horizon": "live/near-term",
+      "rationale": "Prior pending package tracked Zoom expansion in Saudi Arabia; useful demand evidence, not a capacity record.",
+      "source_urls": [
+        "https://news.zoom.us/zoom-launches-second-data-center-in-saudi-arabia/"
+      ],
+      "credibility": "medium"
+    },
+    {
+      "id": "D-HUMAIN-COHERE-270727",
+      "date": "2026-07-27",
+      "title": "HUMAIN and Cohere partnership retained as AI workload demand signal",
+      "country": "Saudi Arabia",
+      "demand_type": "ai_model_platform",
+      "estimated_mw_impact": ">=50 MW referenced in prior package; not live",
+      "time_horizon": "Q4 2027 target in prior package",
+      "rationale": "Keep in demand watch-list pending capacity evidence and project linkage.",
+      "source_urls": [
+        "https://cohere.com/blog/humain-cohere-partnership"
+      ],
+      "credibility": "medium"
+    }
+  ],
+  "regulation_policy": [],
+  "partnerships": [
+    {
+      "id": "P-MIS-SDCF1-270727",
+      "date": "2026-07-22",
+      "title": "MIS and SDCF1 ~48 MW MoU",
+      "partners": [
+        "MIS",
+        "Saudi Data Center Fund 1"
+      ],
+      "country": "Saudi Arabia",
+      "partnership_type": "mou",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 48
+      },
+      "status": "mou",
+      "source_urls": [
+        "https://www.sahmcapital.com/news/content/mis-signs-mou-to-develop-three-data-centers-48-mw-2026-07-22"
+      ],
+      "credibility": "high"
+    },
+    {
+      "id": "P-HUMAIN-COHERE-270727",
+      "date": "2026-07-27",
+      "title": "HUMAIN x Cohere AI platform partnership",
+      "partners": [
+        "HUMAIN",
+        "Cohere"
+      ],
+      "country": "Saudi Arabia",
+      "partnership_type": "ai_model_platform",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": 50
+      },
+      "status": "announced",
+      "source_urls": [
+        "https://cohere.com/blog/humain-cohere-partnership"
+      ],
+      "credibility": "medium"
+    },
+    {
+      "id": "P-MAGNA-EEC-270727",
+      "date": "2026-07-27",
+      "title": "Magna AI and Emaar Executive Company sovereign AI DC partnership",
+      "partners": [
+        "Magna AI",
+        "Emaar Executive Company"
+      ],
+      "country": "Saudi Arabia",
+      "partnership_type": "sovereign_ai_dc",
+      "capacity_mw": {
+        "mw_it_live": 0,
+        "mw_announced": null
+      },
+      "status": "announced_no_mw",
+      "source_urls": [
+        "https://www.magna-ai.com/newsroom/magna-ai-partners-with-emaar-executive-company-to-build-sovereign-ai-data-centers-in-saudi-arabia"
+      ],
+      "credibility": "medium"
+    },
+    {
+      "id": "P-OMAN-IX-270727",
+      "date": "2026-07-27",
+      "title": "Oman-IX launches at Equinix MC1 Muscat",
+      "partners": [
+        "Oman-IX",
+        "Equinix"
+      ],
+      "country": "Oman",
+      "partnership_type": "internet_exchange",
+      "capacity_mw": {
+        "mw_it_live": null,
+        "mw_announced": null
+      },
+      "status": "live_service",
+      "source_urls": [
+        "https://www.equinix.com/newsroom/press-releases/2026/07/equinix-and-oman-ix-launch-new-internet-exchange-in-oman"
+      ],
+      "credibility": "medium"
+    }
+  ],
+  "dashboard_metrics": {
+    "country_mw_split": [],
+    "live_mw_by_country": {},
+    "announced_mw_by_country": {},
+    "top_players_by_known_announced_capacity": [],
+    "gcc_total_existing_capacity": {
+      "total_mw": "Archive snapshot - see package records",
+      "method": "Package-level archive retained for state continuity."
+    }
+  },
+  "watch_items": [],
+  "analyst_notes": []
+}

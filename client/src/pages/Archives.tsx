@@ -19,10 +19,10 @@ const toneByImpact: Record<string, "live" | "watch" | "risk"> = {
 };
 
 export default function Archives() {
-  const [selectedDate, setSelectedDate] = useState(allSnapshots[0].date);
+  const [selectedKey, setSelectedKey] = useState(`${allSnapshots[0].status}-${allSnapshots[0].date}`);
   const selected = useMemo(
-    () => allSnapshots.find((s) => s.date === selectedDate) ?? allSnapshots[0],
-    [selectedDate]
+    () => allSnapshots.find((s) => `${s.status}-${s.date}` === selectedKey) ?? allSnapshots[0],
+    [selectedKey]
   );
 
   const stats = snapshotStats(selected);
@@ -54,7 +54,7 @@ export default function Archives() {
                   key={`${snapshot.status}-${snapshot.date}`}
                   type="button"
                   data-testid={`button-snapshot-${snapshot.date}-${snapshot.status}`}
-                  onClick={() => setSelectedDate(snapshot.date)}
+                  onClick={() => setSelectedKey(`${snapshot.status}-${snapshot.date}`)}
                   className={`w-full rounded-md border p-3 text-left transition-colors ${
                     selected === snapshot
                       ? "border-primary bg-primary/10"

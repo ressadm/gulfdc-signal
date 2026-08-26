@@ -2,7 +2,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { SignalPill, CountryBadge } from "@/components/Signal";
 import { SourceLinks } from "@/components/SourceLinks";
 import { WEEKLY_BRIEF, type BriefItem } from "@/data/weeklyBrief";
-import { dataset } from "@/data/dataset";
+import { COUNTRY_PRIORITY, dataset } from "@/data/dataset";
 import { TrendingUp, AlertTriangle, ShieldAlert, Zap, Info } from "lucide-react";
 
 const ICONS: Record<BriefItem["signal"], any> = {
@@ -36,7 +36,7 @@ export default function WeeklyBrief() {
           data-testid="text-brief-issue"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-          {WEEKLY_BRIEF.length} developments · {dataset._meta.priority_order.length} markets
+          {WEEKLY_BRIEF.length} developments · {COUNTRY_PRIORITY.length} markets
         </span>
       </PageHeader>
 

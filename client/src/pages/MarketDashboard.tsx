@@ -107,15 +107,26 @@ export default function MarketDashboard() {
   const totalAnnouncedLow = announced.reduce((s, r) => s + r.low, 0);
   const totalAnnouncedHigh = announced.reduce((s, r) => s + r.high, 0);
 
+  const splitRows = dataset.dashboard_metrics.country_mw_split ?? [];
   const countryChartData = COUNTRY_PRIORITY.map((c) => {
+    const split = splitRows.find((x: any) => String(x.country).includes(c) || (c === "UAE" && String(x.country).includes("Emirates")));
     const l = live.find((x) => x.country === c);
     const a = announced.find((x) => x.country === c);
+    const liveMw = Number(split?.mw_it_live ?? l?.mw ?? 0) || 0;
+    const underConstruction = Number(split?.mw_under_construction_or_commissioning ?? split?.mw_under_construction_or_contracted ?? 0) || 0;
+    const announcedOnly = Number(split?.mw_announced ?? a?.high ?? 0) || 0;
+    const programme = Number(split?.programme_ambition_mw ?? 0) || 0;
     return {
       country: COUNTRY_CODE[c as CountryKey],
-      live: l?.mw ?? 0,
-      announcedMid: a ? Math.round((a.low + a.high) / 2) : 0,
-      announcedLow: a?.low ?? 0,
-      announcedHigh: a?.high ?? 0,
+      live: liveMw,
+      underConstruction,
+      announcedOnly,
+      programme,
+      powerGwAvailable: split?.power_gw_available,
+      contested: Boolean(split?.denominator_contested),
+      evidence: split?.energisation_evidence,
+      announcedLow: a?.low ?? announcedOnly,
+      announcedHigh: a?.high ?? announcedOnly,
     };
   });
 
@@ -144,32 +155,32 @@ export default function MarketDashboard() {
           unit="MW"
           icon={Server}
           tone="live"
-          hint={`${dataset.dashboard_metrics.gcc_total_existing_capacity.total_mw} per GlobeNewswire portfolio report`}
+          hint={`${dataset.dashboard_metrics.gcc_total_existing_capacity.total_mw} · ${dataset.dashboard_metrics.gcc_total_existing_capacity.method ?? "split methodology"}`}
           testId="kpi-live-mw"
         />
         <KpiCard
-          label="Announced pipeline"
-          value={`${(totalAnnouncedLow / 1000).toFixed(1)}–${(totalAnnouncedHigh / 1000).toFixed(1)}`}
-          unit="GW"
+          label="Near-term non-live MW"
+          value={`${totalAnnouncedHigh.toLocaleString()}`}
+          unit="MW"
           icon={TrendingUp}
           tone="primary"
-          hint="Treat as illustrative; significant double-counting in Saudi figures."
+          hint="Excludes power availability and programme ambition; announced/non-binding remains outside live MW."
           testId="kpi-announced-mw"
         />
         <KpiCard
-          label="Saudi pipeline share"
-          value={`${Math.round(((announced.find((a) => a.country === "Saudi Arabia")?.high ?? 0) / Math.max(totalAnnouncedHigh, 1)) * 100)}%`}
+          label="Saudi contested denominator"
+          value="467 / 410"
           icon={Activity}
           tone="primary"
-          hint="Saudi share of high-end announced GCC pipeline."
+          hint="MCIT-linked headline MW versus Alvarez & Marsal lower live estimate."
           testId="kpi-saudi-share"
         />
         <KpiCard
-          label="Investment to 2027"
-          value={dataset.dashboard_metrics.gcc_total_existing_capacity.investment_to_2027}
+          label="Current baseline"
+          value={dataset._meta.compiled}
           icon={Building2}
           tone="primary"
-          hint={dataset.dashboard_metrics.gcc_total_existing_capacity.source}
+          hint={dataset._meta.public_url}
           testId="kpi-investment"
         />
       </section>
@@ -183,7 +194,7 @@ export default function MarketDashboard() {
                 Country comparison
               </div>
               <h3 className="text-sm font-semibold tracking-tight">
-                Saudi Arabia leads pipeline; UAE leads live capacity
+                Capacity split: live, construction and announced-only
               </h3>
             </div>
             <div className="flex items-center gap-3 text-[11px]">
@@ -192,8 +203,16 @@ export default function MarketDashboard() {
                 Live
               </span>
               <span className="inline-flex items-center gap-1">
+                <span className="h-2 w-3 rounded-sm" style={{ background: CYAN }} />
+                Under constr.
+              </span>
+              <span className="inline-flex items-center gap-1">
                 <span className="h-2 w-3 rounded-sm" style={{ background: TEAL }} />
-                Announced (mid)
+                Announced
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <span className="h-2 w-3 rounded-sm" style={{ background: AMBER }} />
+                Programme
               </span>
             </div>
           </div>
@@ -204,8 +223,10 @@ export default function MarketDashboard() {
                 <XAxis dataKey="country" stroke="hsl(var(--muted-foreground))" tick={{ fontSize: 11 }} tickLine={false} axisLine={{ stroke: BORDER }} />
                 <YAxis stroke="hsl(var(--muted-foreground))" tick={{ fontSize: 11 }} tickLine={false} axisLine={{ stroke: BORDER }} unit=" MW" />
                 <Tooltip content={<ChartTooltip />} cursor={{ fill: "hsl(var(--muted) / 0.4)" }} />
-                <Bar dataKey="live" name="Live MW" fill={GREEN} radius={[2, 2, 0, 0]} />
-                <Bar dataKey="announcedMid" name="Announced (mid)" fill={TEAL} radius={[2, 2, 0, 0]} />
+                <Bar dataKey="live" name="Live IT MW" stackId="capacity" fill={GREEN} radius={[2, 2, 0, 0]} />
+                <Bar dataKey="underConstruction" name="Under construction / commissioning MW" stackId="capacity" fill={CYAN} radius={[2, 2, 0, 0]} />
+                <Bar dataKey="announcedOnly" name="Announced / non-binding MW" stackId="capacity" fill={TEAL} radius={[2, 2, 0, 0]} />
+                <Bar dataKey="programme" name="Programme ambition MW" stackId="capacity" fill={AMBER} radius={[2, 2, 0, 0]} />
               </ComposedChart>
             </ResponsiveContainer>
           </div>
@@ -316,7 +337,7 @@ export default function MarketDashboard() {
             })}
           </div>
           <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">
-            Bar length = announced pipeline range. Tick = current live MW.
+            Bar length = non-live announced range. Tick = current live IT MW. Programme ambition and available power are separated from live capacity.
           </p>
         </div>
       </section>
@@ -404,9 +425,9 @@ export default function MarketDashboard() {
                       </span>
                     </td>
                     <td className="py-2 pr-3">
-                      {r.source_url ? (
+                      {(r.source_url || r.source_urls?.[0]) ? (
                         <a
-                          href={r.source_url}
+                          href={r.source_url || r.source_urls?.[0]}
                           target="_blank"
                           rel="noreferrer noopener"
                           className="text-primary underline-offset-2 hover:underline"

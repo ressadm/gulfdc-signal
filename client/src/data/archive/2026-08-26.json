@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "dataset": "GulfDC Signal public dataset",
-    "version": "1.4.0",
+    "dataset": "GulfDC Signal public dataset archive",
+    "version": "1.4.0-archive",
     "compiled": "2026-08-26",
     "window": "Pending refresh packages through 26 August 2026",
     "public_url": "https://ressadm.github.io/gulfdc-signal/",
@@ -26,7 +26,8 @@
       "Qatar split separates Syntys/Ooredoo live capacity, MEEZA live/financed build-out and targets.",
       "Excludes outbound/non-GCC capacity from Gulf live totals: Ooredoo/Zankore Indonesia, Mubadala/Akita Japan, Khazna x Eni Italy, Core42 Buffalo and DataVolt Uzbekistan."
     ],
-    "disclaimer": "Research intelligence only; capacity estimates remain provisional where primary energisation, contract or operator data is unavailable."
+    "disclaimer": "Research intelligence only; capacity estimates remain provisional where primary energisation, contract or operator data is unavailable.",
+    "archive_note": "Frozen Aug 26 package snapshot matching the current dashboard baseline at publication time."
   },
   "supply_events": [
     {
